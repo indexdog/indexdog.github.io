@@ -54,9 +54,55 @@ theme:
 copyright: 'Copyright &copy; 2024-2024 indexdog'
 
 markdown_extensions:
-  - pymdownx.arithmatex:
+  - abbr
+  - attr_list
+  - admonition
+  - def_list
+  - footnotes
+  - md_in_html
+  - meta # 支持Markdown文件上方自定义标题标签等
+  - pymdownx.caret
+  - pymdownx.betterem
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.snippets
+  - pymdownx.smartsymbols
+  - pymdownx.tilde
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format # 代码块高亮插件
+  - pymdownx.arithmatex:  # latex支持
       generic: true
+  - toc:
+      permalink: true # 固定标题位置为当前位置
+  - pymdownx.highlight: # 代码块高亮
+      anchor_linenums: true
+      linenums: true # 显示行号
+      # auto_title: true # 显示编程语言名称
+  
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - markdown.extensions.toc:
+      slugify: !!python/object/apply:pymdownx.slugs.slugify {kwds: {case: lower}}
+      permalink: "\ue157"
+
 
 extra_javascript:
   - javascripts/mathjax.js
   - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+
+nav:
+  - 学习:
+    - 语言基础:
+      - c: language/c.md
+      - c#: language/c#.md
+      - python: language/py.md
+  - idea:
+    - 网站分享:  blog/website.md #.md文件的相对路径
