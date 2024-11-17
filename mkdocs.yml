@@ -51,7 +51,7 @@ theme:
     - content.code.annotate 
   language: zh # 一些提示性的文字会变成中文
 
-copyright: 'Copyright &copy; 2024-2024 Tenderfoot'
+copyright: 'Copyright &copy; 2024-2024 indexdog'
 
 markdown_extensions:
   - pymdownx.arithmatex:
