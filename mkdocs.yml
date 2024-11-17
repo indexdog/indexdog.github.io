@@ -1,0 +1,5 @@
+site_name: 索引狗的博客
+site_url: https://indexdog.github.io/mymkdocs
+site_author: index_dog
+theme:
+  name: material #主题
