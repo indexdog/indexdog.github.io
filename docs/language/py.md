@@ -2,8 +2,6 @@
 comments: true
 ---
 
-
-
 # python语法
 
 ## 注意
