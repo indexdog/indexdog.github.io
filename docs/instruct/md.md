@@ -29,7 +29,7 @@ _这里是文字_
 ***这里是文字***
 ~~这里是文字~~
 
-![这里写图片描述](https://img-blog.csdn.net/20180802154402427?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQwNjE2MzA=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
+![alt text](image-3.png)
 
 #### 2.4 分割线
 
@@ -58,12 +58,12 @@ _这里是文字_
 
 （1）基本使用
 使用如下图所示：
-![这里写图片描述](https://img-blog.csdn.net/20180802160324418?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQwNjE2MzA=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
+![alt text](image-2.png)
 
 （2）引用的嵌套使用
 使用如图所示：
-![这里写图片描述](https://img-blog.csdn.net/20180802160343802?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQwNjE2MzA=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
+![alt text](image-1.png)
 （3）引用其它要素
 引用的区块内也可以使用其他的 Markdown 语法，包括标题、列表、代码区块等。
 使用如图所示：
-![这里写图片描述](https://img-blog.csdn.net/20180802160421785?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQwNjE2MzA=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
+![alt text](image.png)
