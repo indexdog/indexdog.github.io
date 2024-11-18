@@ -98,6 +98,15 @@ extra_javascript:
   - javascripts/mathjax.js
   - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
 
+
+extra_css:
+  - https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css
+
+extra_javascript:
+  - https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js
+
+
+
 nav:
   - 学习:
     - 语言基础:
@@ -106,3 +115,8 @@ nav:
       - python: language/py.md
   - idea:
     - 网站分享:  blog/website.md #.md文件的相对路径
+
+    
+
+
+    
