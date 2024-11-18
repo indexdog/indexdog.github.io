@@ -117,7 +117,7 @@ nav:
       - python: language/py.md
   - idea:
     - 网站分享:  blog/website.md #.md文件的相对路径
-
+    - 碎碎念:  blog/chat.md 
     
 
 
