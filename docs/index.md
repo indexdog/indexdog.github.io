@@ -8,6 +8,6 @@ comments: true
 
 # 音乐播放器
 
-<div id="app">
-  <a-player :audio="audio" :lrc-type="3"></a-player>
-</div>
+<link rel="stylesheet" href="APlayer.min.css">
+<div id="aplayer"></div>
+<script src="APlayer.min.js"></script>
