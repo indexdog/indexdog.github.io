@@ -118,6 +118,8 @@ nav:
     - 常用指令:
       - makedown语法: instruct/md.md
       - Jupyter Notebook 的快捷键: instruct/jn.md 
+    - mkdocs遇到的问题: mkdocsq/q.md
+      
   - idea:
     - 网站分享:  blog/website.md #.md文件的相对路径
     - 碎碎念:  blog/chat.md 
