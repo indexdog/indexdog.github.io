@@ -51,7 +51,7 @@ C语言中，数据类型可分为：
 
 因为精度的不同又分为3种(float,double,long double)：
 
-![浮点型](https://img-blog.csdnimg.cn/img_convert/ba3adb33221ba262997156095e8e5b64.png)
+![alt text](image.png)
 
 注：**C语言中不存在字符串变量，字符串只能存在字符数组中,**这个后面会讲。
 
@@ -61,8 +61,7 @@ C语言中，数据类型可分为：
 格式化输出语句，也可以说是**占位输出**，是将各种类型的数据按照**格式化后的类型及指定的位置**从计算机上显示。
 
 其格式为：`printf("输出格式符"，输出项)`;吧
-
-![c语言常用格式化符](https://img-blog.csdnimg.cn/img_convert/be3d7bafda1b5321fb9354ce7128aa27.png)
+![alt text](image-1.png)
 
 当输出语句中包含普通字符时，可以采用一下格式：
 
@@ -71,7 +70,7 @@ printf("普通字符输出格式符", 输出项);
 1
 ```
 
-![mark](https://img-blog.csdnimg.cn/img_convert/19d9002957c0ded0bd30278e749b5e63.png)
+![alt text](image-2.png)
 
 注意：**格式符**的**个数**要与**变量、常量或者表达式的个数一**一对应
 
@@ -92,7 +91,7 @@ mtianyan: C语言的常量可以分为**直接常量和符号常量。**
   - 字符常量：‘a’、‘M’
   - 字符串常量：”I love imooc!”
 
-![mark](https://img-blog.csdnimg.cn/img_convert/92d578afc9e5463821c5c9bacb4ffc54.png)
+![alt text](image-3.png)
 
 在C语言中，可以用一个标识符来表示一个常量，称之为符号常量。符号常量在使用之前必须先定义，其一般形式为：
 
@@ -119,7 +118,7 @@ int main()
 数据类型存在自动转换的情况.
 自动转换发生在**不同数据类型**运算时，在编译的时候**自动完成**。
 
-![自动转换](https://img-blog.csdnimg.cn/img_convert/cfb12365d13ecd8566a481b7e46155b4.png)
+![alt text](image-4.png)
 
 `char`类型数据转换为`int`类型数据遵循`ASCII`码中的对应值.
 
@@ -154,7 +153,7 @@ int main()
 
 c语言**基本运算符:**
 
-![基本算术运算符](https://img-blog.csdnimg.cn/img_convert/c5a749723e3021d8ed30a6b8398cca07.png)
+![alt text](image-5.png)
 
 **除法**运算中**注意**：
 
@@ -177,7 +176,7 @@ mtianyan: `%%`表示这里就是一个`%`符.
 - 自增运算符为`++`，其功能是使变量的值自增1
 - 自减运算符为`--`，其功能是使变量值自减1。
 
-![自增自减](https://img-blog.csdnimg.cn/img_convert/c15ab00697b1fc3a4441b8cd141ddcda.png)
+![alt text](image-6.png)
 
 ##### 赋值运算符
 
@@ -197,7 +196,7 @@ C语言中赋值运算符分为**简单赋值运算符**和**复合赋值运算�
 
 C语言中的**关系运算符**:
 
-![关系运算符](https://img-blog.csdnimg.cn/img_convert/2284be0aca9664f780fb6e55e2e2a77f.png)
+![alt text](image-7.png)
 
 关系表达式的值是`真`和`假`，在C程序用整数`1`和`0`表示。
 
@@ -207,7 +206,7 @@ C语言中的**关系运算符**:
 
 C语言中的逻辑运算符:
 
-![逻辑运算符](https://img-blog.csdnimg.cn/img_convert/66c97984dfde569fbfbd426743f50697.png)
+![alt text](image-8.png)
 
 逻辑运算的值也是有两种分别为`真`和`假`，C语言中用整型的1和0来表示。其求值规则如下：
 
@@ -255,7 +254,7 @@ int main()
 
 各种运算符号的顺序:
 
-![运算符的优先级](https://img-blog.csdnimg.cn/img_convert/20e9c2e337b881c67d216afe05a275fd.png)
+![alt text](image-9.png)
 
 **优先级别为1的优先级最高**，优先级别为10的优先级别最低。
 
@@ -276,7 +275,7 @@ while语句的语义是：计算表达式的值，当值为`真(非0)`时， 执
 
 C语言中的`do-while`循环，一般形式如下：
 
-![do-while](https://img-blog.csdnimg.cn/img_convert/a7a058fe4a940281c74ec56aec2cdc1b.png)
+![alt text](image-10.png)
 
 do-while循环语句的语义是:
 
@@ -288,7 +287,7 @@ do-while循环语句的语义是:
 
 c语言中**for循环**一般形式：
 
-![for](https://img-blog.csdnimg.cn/img_convert/430553d5465ac53be4cbfb4c0e2482a7.png)
+![alt text](image-11.png)
 
 它的执行过程如下：
 
@@ -355,7 +354,7 @@ break语句与continue语句的区别是:
 
 #### 分支结构之switch语句(cpp)
 
-![switch](https://img-blog.csdnimg.cn/img_convert/0b65fc0b70d0627398270200874ed4f6.png)
+![alt text](image-12.png)
 
 `switch`语句时还应**注意**以下几点：
 
@@ -373,7 +372,7 @@ break语句与continue语句的区别是:
 
 #### 臭名远扬之goto语句(cpp)
 
-![mark](https://img-blog.csdnimg.cn/img_convert/2850dd78567005e8047055159bbbcffe.png)
+![alt text](image-13.png)
 
 #### 自创函数(cpp)
 
@@ -397,23 +396,23 @@ C语言中存储类别又分为四类：
 
 1、用关键字auto定义的变量为自动变量，auto可以省略，auto不写则隐含定为“自动存储类别”，属于动态存储方式。如：
 
-![auto](https://img-blog.csdnimg.cn/img_convert/ce56abb2380367008122be0e9f7db54e.png)
+![alt text](image-14.png)
 
 2、用static修饰的为静态变量，如果定义在函数内部的，称之为静态局部变量；如果定义在函数外部，称之为静态外部变量。如下为静态局部变量：
 
-![static](https://img-blog.csdnimg.cn/img_convert/6dee6dc3aabecd7add027c03a868a3bc.png)
+![alt text](image-15.png)
 
 注意：静态局部变量属于静态存储类别，在静态存储区内分配存储单元，在程序整个运行期间都不释放；静态局部变量在编译时赋初值，即只赋初值一次；如果在定义局部变量时不赋初值的话，则对静态局部变量来说，编译时自动赋初值0（对数值型变量）或空字符（对字符变量）。
 
 3、为了提高效率，C语言允许将局部变量得值放在CPU中的寄存器中，这种变量叫“寄存器变量”，用关键字register作声明。例如：
 
-![register](https://img-blog.csdnimg.cn/img_convert/70ab0f3e683ea2a572ed2aab7bbde323.png)
+![alt text](image-16.png)
 
  注意：只有局部自动变量和形式参数可以作为寄存器变量；一个计算机系统中的寄存器数目有限，不能定义任意多个寄存器变量；**局部静态变量不能定义为寄存器变量。**
 
 4、用extern声明的的变量是外部变量，外部变量的意义是某函数可以调用在该函数之后定义的变量。如：
 
-![extern](https://img-blog.csdnimg.cn/img_convert/71ecff3d41fc366a1c008d2e37ae9bc0.png)
+![alt text](image-17.png)
 
 #### 内部函数与外部函数
 

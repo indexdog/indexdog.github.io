@@ -645,6 +645,6 @@ int? ii; //默认值null
 
 接下来我们详细说明。
 
-![image-20241113223922715](C:\Users\10648\AppData\Roaming\Typora\typora-user-images\image-20241113223922715.png)
+![alt text](image-18.png)
 
 ## 数组（Array）
