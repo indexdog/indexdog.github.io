@@ -8,6 +8,6 @@ comments: true
 
 
 <audio controls>
-  <source src="//music.163.com/outchain/player?type=2&id=393697&auto=1&height=66" type="audio/mpeg">
+  <source src="http://music.163.com/song/media/outer/url?id=1453946527.mp3" type="audio/mpeg">
   您的浏览器不支持音频元素。
 </audio>
