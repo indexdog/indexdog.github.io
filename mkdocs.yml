@@ -98,14 +98,6 @@ markdown_extensions:
 extra_javascript:
   - javascripts/mathjax.js
   - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
-  - https://cdn.jsdelivr.net/npm/vue
-  - https://cdn.jsdelivr.net/npm/@moefe/vue-aplayer
-  - js/vue-aplayer-init.js
-  - https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js
-
-
-extra_css:
-  - https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css
 
 
 
