@@ -114,7 +114,7 @@ nav:
     - 算法学习: 
       - 算法基础: algorithm/note.md
     - 数据结构: 
-      - 数据结构基础: data stru/bj.md
+      - 数据结构基础（转载）: data stru/bj.md
 
     - mkdocs遇到的问题: mkdocsq/q.md
       
