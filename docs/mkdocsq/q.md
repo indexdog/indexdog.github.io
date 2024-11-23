@@ -78,3 +78,10 @@ iframe {
 extra_css:
   - assets/css/style.css
   ```
+
+
+  #### 点击跳转网站
+  格式：`[描述](网址)`
+  例：`[OCS网课助手](https://docs.ocsjs.com/docs/script/)`
+  实现：[OCS网课助手](https://docs.ocsjs.com/docs/script/)
+  
