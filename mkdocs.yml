@@ -4,6 +4,7 @@ site_author: index_dog
 theme:
   name: material #主题
   custom_dir: docs/overrides
+
   palette:
     # Palette toggle for light mode
     - media: "(prefers-color-scheme: light)"
@@ -17,8 +18,8 @@ theme:
     # Palette toggle for dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
-      primary: '#1E3A8A'
-      accent: '#3B82F6'
+      primary: blue grey
+      accent: indigo
       toggle:
         icon: material/weather-night
         name: Switch to light mode
@@ -27,6 +28,10 @@ theme:
   favicon: 'favicon.ico'
   icon:
     logo: 'material/school'
+
+    # 引入自定义 CSS 文件
+extra_css:
+  - css/styles.css
 
   features: 
     - announce.dismiss #呈现可标记为由用户读取的临时公告，可以包含一个用于取消当前公告的按钮
