@@ -117,6 +117,7 @@ nav:
     - 算法学习: 
       - 算法基础: algorithm/note.md
       - 蓝桥杯备赛: algorithm/lanqiao.md
+      - STL总结: algorithm/stl.md
     - 数据结构: 
       - 数据结构基础（转载）: data stru/bj.md
 
