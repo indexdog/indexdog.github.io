@@ -165,7 +165,7 @@ queue<int> q;
 | `size()`                              | 返回deque的元素数量 O(1)*O*(1)       |
 | `clear()`                             | 清空deque                            |
 
-## 5.priority_queue
+## 5.priority_queue(大根堆)
 
 包含头文件：
 
@@ -598,11 +598,18 @@ cout << one << two << three << "\n"; // 1hahaha3
 
 ```cpp
 accumulate(beg, end, init)
+//accumulate(起始迭代器, 结束迭代器, 初始值, 自定义操作函数)
 ```
 
 **复杂度：** O(N)*O*(*N*)
 
 > 作用：对一个序列的元素求和
+
+例：
+```cpp
+ vector<int> h;
+ int ans = accumulate(h.begin(),h.end(),0);
+```
 
 ### atoi
 
@@ -665,6 +672,14 @@ upper_bound(a, a + n, x);
 //函数都是返回地址，需要加*取值
 int mx = *max_element(a, a + n);
 int mn = *min_element(a, a + n);
+```
+
+例：
+```cpp
+vector<int> h;
+auto max_it = max_element(h.begin(),h.end());
+//auto自动推导变量类型
+max_it = *max_element(h.begin(),h.end());
 ```
 
 ### max+min
