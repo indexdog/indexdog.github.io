@@ -791,6 +791,11 @@ reverse(beg,end)
 sort(beg, end);
 sort(beg, end, cmp);
 ```
+例：
+```cpp
+vector<int> a[n];
+sort(a,a+n);
+```
 
 ### stable_sort
 
