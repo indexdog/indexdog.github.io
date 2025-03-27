@@ -10,7 +10,7 @@
 
 ### 进入项目文件夹
 
-* 项目文件夹中要有dockerfile，关于dockerfile，见[Docker Dockerfile]()
+* 项目文件夹中要有dockerfile，关于dockerfile，见[Docker Dockerfile](dockerfile0.md)
 
 * 安装`docker-buildx` 插件：
 
