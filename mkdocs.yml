@@ -118,8 +118,16 @@ nav:
       - 算法基础: algorithm/note.md
       - 蓝桥杯备赛: algorithm/lanqiao.md
       - STL总结: algorithm/stl.md
+      - 算法精选: algorithm/junior.md
     - 数据结构: 
       - 数据结构基础（转载）: data stru/bj.md
+    - Docker: 
+      - docker简介: docker/docker intro.md
+      - wsl部署docker: docker/docker wsl.md
+      - docker命令: docker/docker instruct.md
+      - dockerile : docker/dockerfile0.md
+    - Tools in coding:
+      - vim: tools/vim.md
 
     - mkdocs遇到的问题: mkdocsq/q.md
       

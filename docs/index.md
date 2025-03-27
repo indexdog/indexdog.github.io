@@ -4,7 +4,11 @@ comments: true
 
 # Welcome to indexdog's blog
 
-**记录学习历程......**
+TJU CS本科在读
+
+**记录学习历程**
+**持续更新中**
+......
 
 
 
