@@ -265,7 +265,7 @@ ST 表（Sparse Table，稀疏表）是用于解决 **可重复贡献问题** �
 
 具体实现如下：
 
-![image-20250305222257627](C:\Users\10648\AppData\Roaming\Typora\typora-user-images\image-20250305222257627.png)
+![alt text](image-20250305222257627.png)
 
 ## 回溯
 

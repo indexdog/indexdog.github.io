@@ -7,3 +7,6 @@
 
 [表格转换工具](https://tableconvert.com/zh-cn/markdown-generator)
 可将表格转化为makedown，可修改交互
+
+[studocu](https://www.studocu.com/)
+可以找到学习资源习题答案等，上传文件可以获得会员资格，很会营销了
