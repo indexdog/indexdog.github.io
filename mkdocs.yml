@@ -112,8 +112,10 @@ nav:
       - c#: language/c#.md
       - python: language/py.md
     - 常用指令:
-      - makedown语法: instruct/md.md
-      - Jupyter Notebook 的快捷键: instruct/jn.md 
+      - makedown语法: instruct/md.md 
+    - python相关:
+      - Jupyter Notebook 的快捷键: instruct/jn.md
+      - matplotlib用法: py/matplotlib.md
     - 算法学习: 
       - 算法基础: algorithm/note.md
       - 蓝桥杯备赛: algorithm/lanqiao.md
