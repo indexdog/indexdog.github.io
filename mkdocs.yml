@@ -1,12 +1,14 @@
 site_name: 索引狗的博客
 site_url: https://indexdog.github.io/mymkdocs
 site_author: index_dog
+
+use_directory_urls: false  # 修复404跳转问题
+
 theme:
-  name: material #主题
+  name: material
   custom_dir: docs/overrides
 
   palette:
-    # Palette toggle for light mode
     - media: "(prefers-color-scheme: light)"
       scheme: default
       primary: blue grey
@@ -14,8 +16,6 @@ theme:
       toggle:
         icon: material/weather-sunny
         name: Switch to dark mode
-
-    # Palette toggle for dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
       primary: blue grey
@@ -23,38 +23,37 @@ theme:
       toggle:
         icon: material/weather-night
         name: Switch to light mode
-  include_search_page: false
-  search_index_only: true
+
   favicon: 'favicon.ico'
   icon:
     logo: 'material/school'
 
-
-
   features: 
-    - announce.dismiss #呈现可标记为由用户读取的临时公告，可以包含一个用于取消当前公告的按钮
-    - navigation.instant 
-    #- header.autohide  #自动隐藏
-    - navigation.tracking #地址栏中的 URL 将自动更新为在目录中突出显示的活动锚点
-    - navigation.tabs #顶级部分将呈现在上面视口标题下方的菜单层中，但在移动设备上保持原样
-    # - navigation.tabs.sticky  #启用粘性选项卡后，导航选项卡将锁定在标题下方，并在向下滚动时始终保持可见
-    - navigation.sections #启用部分后，顶级部分在边栏中呈现为1220px以上视口的组，但在移动设备上保持原样
-    - navigation.top # 返回顶部的按钮 在上滑时出现
-    - navigation.footer #页脚将呈现在边栏中，但在移动设备上保持原样
-    - search.suggest # 搜索输入一些字母时推荐补全整个单词
-    - search.highlight # 搜索出的文章关键词加入高亮
-    - search.share #搜索分享按钮
-    - navigation.expand # 打开Tab时左侧目录全部展开
-    - navigation.indexes #启用节索引页后，可以将文档直接附加到节
+    - announce.dismiss
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - navigation.footer
+    - navigation.expand
+    - navigation.indexes
+    - search.suggest
+    - search.highlight
+    - search.share
     - content.tabs.link
     - content.tooltips
     - content.code.copy
     - content.action.edit
     - content.action.view
-    - content.code.annotate 
-  language: zh # 一些提示性的文字会变成中文
+    - content.code.annotate
+
+  language: zh
 
 copyright: 'Copyright &copy; 2024-2024 indexdog'
+
+plugins:
+  - search
 
 markdown_extensions:
   - abbr
@@ -63,7 +62,7 @@ markdown_extensions:
   - def_list
   - footnotes
   - md_in_html
-  - meta # 支持Markdown文件上方自定义标题标签等
+  - meta
   - pymdownx.caret
   - pymdownx.betterem
   - pymdownx.critic
@@ -78,83 +77,70 @@ markdown_extensions:
       custom_fences:
         - name: mermaid
           class: mermaid
-          #format: !!python/name:pymdownx.superfences.fence_code_format # 代码块高亮插件
-  - pymdownx.arithmatex:  # latex支持
+  - pymdownx.arithmatex:
       generic: true
-  - toc:
-      permalink: true # 固定标题位置为当前位置
-  - pymdownx.highlight: # 代码块高亮
+  - pymdownx.highlight:
       anchor_linenums: true
-      linenums: true # 显示行号
-      # auto_title: true # 显示编程语言名称
-  
+      linenums: true
   - pymdownx.tabbed:
       alternate_style: true
   - pymdownx.tasklist:
       custom_checkbox: true
+  - toc:
+      permalink: true
   - markdown.extensions.toc:
-      #slugify: !!python/object/apply:pymdownx.slugs.slugify {kwds: {case: lower}}
       permalink: "\ue157"
-
-
 
 extra_javascript:
   - javascripts/mathjax.js
   - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
 
-
-
-
 nav:
   - 学习:
-    - 语言基础:
-      - c: STUDY/language/c.md
-      - c#: STUDY/language/c#.md
-      - python: STUDY/language/py.md
-    - 常用指令:
-      - makedown语法: STUDY/instruct/md.md 
-    - python相关:
-      - Jupyter Notebook 的快捷键: STUDY/instruct/jn.md
-      - matplotlib用法: STUDY/py/matplotlib.md
-      - Numpy & Pandas用法: STUDY/py/numpypandas.md
-    - 算法学习: 
-      - 算法基础: STUDY/algorithm/note.md
-      - 蓝桥杯备赛: STUDY/algorithm/lanqiao.md
-      - STL总结: STUDY/algorithm/stl.md
-      - 算法精选: STUDY/algorithm/junior.md
-    - 数据结构: 
-      - 数据结构基础（转载）: STUDY/data stru/bj.md
-    - 并行计算:
-      - MPI编程: STUDY/bxjs/MPI.md
-    - Docker: 
-      - docker简介: STUDY/docker/docker intro.md
-      - wsl部署docker: STUDY/docker/docker wsl.md
-      - docker命令: STUDY/docker/docker instruct.md
-      - dockerfile : STUDY/docker/dockerfile0.md
-    - Tools in coding:
-      - vim: STUDY/tools/vim.md
-    - mkdocs遇到的问题: STUDY/mkdocsq/q.md
+      - 语言基础:
+          - C: STUDY/language/c.md
+          - C#: STUDY/language/c_sharp.md
+          - Python: STUDY/language/py.md
+      - 常用指令:
+          - Markdown语法: STUDY/instruct/md.md
+      - Python相关:
+          - Jupyter Notebook 快捷键: STUDY/instruct/jn.md
+          - Matplotlib 用法: STUDY/py/matplotlib.md
+          - Numpy & Pandas 用法: STUDY/py/numpypandas.md
+      - 算法学习:
+          - 算法基础: STUDY/algorithm/note.md
+          - 蓝桥杯备赛: STUDY/algorithm/lanqiao.md
+          - STL 总结: STUDY/algorithm/stl.md
+          - 算法精选: STUDY/algorithm/junior.md
+      - 数据结构:
+          - 数据结构基础（转载）: STUDY/datastru/bj.md
+      - 并行计算:
+          - MPI 编程: STUDY/bxjs/MPI.md
+      - Docker:
+          - Docker 简介: STUDY/docker/docker_intro.md
+          - WSL 部署 Docker: STUDY/docker/docker_wsl.md
+          - Docker 命令: STUDY/docker/docker_instruct.md
+          - Dockerfile: STUDY/docker/dockerfile0.md
+      - Tools in Coding:
+          - Vim: STUDY/tools/vim.md
+      - MkDocs 遇到的问题: STUDY/mkdocsq/q.md
 
-  - project:
-    - 大模型微调: PROJECT/llm/llm.md
+  - Project:
+      - 大模型微调: PROJECT/llm/llm.md
 
   - 课程资料:
-    - 形式化方法:
-      - 课程介绍: COURSE/FM/fm.md
-      - introduction of Formal Methods: COURSE/FM/fm1.md
-      - Set Theory: COURSE/FM/fm2.md
-      - Types in Z: COURSE/FM/3.md
-      - Schema: COURSE/FM/4.md
-      - Predicates and Quantifiers in Z: COURSE/FM/5.md
-      - Functions in Z: COURSE/FM/6.md
-      - Sequences in Z: COURSE/FM/7.md
-      - Bags in Z: COURSE/FM/8.md
-      - Hints on creating specification: COURSE/FM/9.md
-      
-  - idea:
-    - 实用工具分享:  BLOG/website.md #.md文件的相对路径
-    - 碎碎念:  BLOG/chat.md 
-    
+      - 形式化方法:
+          - 课程介绍: COURSE/FM/fm.md
+          - Introduction of Formal Methods: COURSE/FM/fm1.md
+          - Set Theory: COURSE/FM/fm2.md
+          - Types in Z: COURSE/FM/3.md
+          - Schema: COURSE/FM/4.md
+          - Predicates and Quantifiers in Z: COURSE/FM/5.md
+          - Functions in Z: COURSE/FM/6.md
+          - Sequences in Z: COURSE/FM/7.md
+          - Bags in Z: COURSE/FM/8.md
+          - Hints on Creating Specification: COURSE/FM/9.md
 
-
-    
+  - Idea:
+      - 实用工具分享: BLOG/website.md
+      - 碎碎念: BLOG/chat.md
