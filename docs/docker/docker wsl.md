@@ -135,3 +135,12 @@
   ```bash
   docker ps -a
   ```
+* 在容器中拆分终端
+  ```bash
+  docker exec -it <container_id> bash 或：
+  docker exec -it <container_name> bash
+  ```
+  例如：
+  ```bash
+  docker exec -it Liso bash
+  ```

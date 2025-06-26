@@ -121,6 +121,8 @@ nav:
       - 算法精选: algorithm/junior.md
     - 数据结构: 
       - 数据结构基础（转载）: data stru/bj.md
+    - 并行计算:
+      - MPI编程: bxjs/MPI.md
     - Docker: 
       - docker简介: docker/docker intro.md
       - wsl部署docker: docker/docker wsl.md
