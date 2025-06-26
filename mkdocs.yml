@@ -116,6 +116,7 @@ nav:
     - python相关:
       - Jupyter Notebook 的快捷键: instruct/jn.md
       - matplotlib用法: py/matplotlib.md
+      - Numpy & Pandas用法: py/numpypandas.md
     - 算法学习: 
       - 算法基础: algorithm/note.md
       - 蓝桥杯备赛: algorithm/lanqiao.md
