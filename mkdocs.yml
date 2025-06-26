@@ -126,7 +126,8 @@ nav:
       - MkDocs 遇到的问题: STUDY/mkdocsq/q.md
 
   - Project:
-      - 大模型微调: PROJECT/llm/llm.md
+      - 桌面机器人:
+          - 大模型微调: PROJECT/llm/llm.md
 
   - 课程资料:
       - 形式化方法:
