@@ -108,41 +108,41 @@ extra_javascript:
 nav:
   - 学习:
     - 语言基础:
-      - c: language/c.md
-      - c#: language/c#.md
-      - python: language/py.md
+      - c: STUDY/language/c.md
+      - c#: STUDY/language/c#.md
+      - python: STUDY/language/py.md
     - 常用指令:
-      - makedown语法: instruct/md.md 
+      - makedown语法: STUDY/instruct/md.md 
     - python相关:
-      - Jupyter Notebook 的快捷键: instruct/jn.md
-      - matplotlib用法: py/matplotlib.md
-      - Numpy & Pandas用法: py/numpypandas.md
+      - Jupyter Notebook 的快捷键: STUDY/instruct/jn.md
+      - matplotlib用法: STUDY/py/matplotlib.md
+      - Numpy & Pandas用法: STUDY/py/numpypandas.md
     - 算法学习: 
-      - 算法基础: algorithm/note.md
-      - 蓝桥杯备赛: algorithm/lanqiao.md
-      - STL总结: algorithm/stl.md
-      - 算法精选: algorithm/junior.md
+      - 算法基础: STUDY/algorithm/note.md
+      - 蓝桥杯备赛: STUDY/algorithm/lanqiao.md
+      - STL总结: STUDY/algorithm/stl.md
+      - 算法精选: STUDY/algorithm/junior.md
     - 数据结构: 
-      - 数据结构基础（转载）: data stru/bj.md
+      - 数据结构基础（转载）: STUDY/data stru/bj.md
     - 并行计算:
-      - MPI编程: bxjs/MPI.md
+      - MPI编程: STUDY/bxjs/MPI.md
     - Docker: 
-      - docker简介: docker/docker intro.md
-      - wsl部署docker: docker/docker wsl.md
-      - docker命令: docker/docker instruct.md
-      - dockerfile : docker/dockerfile0.md
+      - docker简介: STUDY/docker/docker intro.md
+      - wsl部署docker: STUDY/docker/docker wsl.md
+      - docker命令: STUDY/docker/docker instruct.md
+      - dockerfile : STUDY/docker/dockerfile0.md
     - Tools in coding:
-      - vim: tools/vim.md
-
-    - mkdocs遇到的问题: mkdocsq/q.md
+      - vim: STUDY/tools/vim.md
+    - mkdocs遇到的问题: STUDY/mkdocsq/q.md
 
   - project:
-    - 大模型微调: project/llm/llm.md
-
+    - 大模型微调: PROJECT/llm/llm.md
+  - 课程资料:
+    - 形式化方法: 
       
   - idea:
-    - 实用工具分享:  blog/website.md #.md文件的相对路径
-    - 碎碎念:  blog/chat.md 
+    - 实用工具分享:  BLOG/website.md #.md文件的相对路径
+    - 碎碎念:  BLOG/chat.md 
     
 
 
