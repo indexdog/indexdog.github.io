@@ -130,11 +130,14 @@ nav:
       - docker简介: docker/docker intro.md
       - wsl部署docker: docker/docker wsl.md
       - docker命令: docker/docker instruct.md
-      - dockerile : docker/dockerfile0.md
+      - dockerfile : docker/dockerfile0.md
     - Tools in coding:
       - vim: tools/vim.md
 
     - mkdocs遇到的问题: mkdocsq/q.md
+  
+  -project:
+
       
   - idea:
     - 实用工具分享:  blog/website.md #.md文件的相对路径
