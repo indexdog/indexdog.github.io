@@ -142,5 +142,7 @@ nav:
           - Hints on Creating Specification: COURSE/FM/9.md
 
   - Idea:
-      - 实用工具分享: BLOG/website.md
-      - 碎碎念: BLOG/chat.md
+      - 实用工具分享: 
+          - 网站: BLOG/website.md
+      - 碎碎念: 
+          - 学习记录: BLOG/chat.md
