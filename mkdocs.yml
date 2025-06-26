@@ -135,8 +135,8 @@ nav:
       - vim: tools/vim.md
 
     - mkdocs遇到的问题: mkdocsq/q.md
-  
-  -project:
+
+  - project:
     - 大模型微调: project/llm/llm.md
 
       
