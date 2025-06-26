@@ -10,3 +10,6 @@
 
 [studocu](https://www.studocu.com/)
 可以找到学习资源习题答案等，上传文件可以获得会员资格，很会营销了
+
+[PDF工具](https://smallpdf.com/cn/edit-pdf#r=annotate)
+我会用这个在网页打开pdf用插件搜题，还可以转换整合pdf之类的，还没用过 以后再说。
