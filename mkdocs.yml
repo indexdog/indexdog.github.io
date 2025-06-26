@@ -137,8 +137,11 @@ nav:
 
   - project:
     - 大模型微调: PROJECT/llm/llm.md
+
   - 课程资料:
-    - 形式化方法: 
+    - 形式化方法:
+      - 课程介绍: COURSE/FM/fm.md
+      - introduction of Formal Methods: COURSE/FM/fm1.md
       
   - idea:
     - 实用工具分享:  BLOG/website.md #.md文件的相对路径
