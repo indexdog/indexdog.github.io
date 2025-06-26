@@ -142,6 +142,14 @@ nav:
     - 形式化方法:
       - 课程介绍: COURSE/FM/fm.md
       - introduction of Formal Methods: COURSE/FM/fm1.md
+      - Set Theory: COURSE/FM/fm2.md
+      - Types in Z: COURSE/FM/3.md
+      - Schema: COURSE/FM/4.md
+      - Predicates and Quantifiers in Z: COURSE/FM/5.md
+      - Functions in Z: COURSE/FM/6.md
+      - Sequences in Z: COURSE/FM/7.md
+      - Bags in Z: COURSE/FM/8.md
+      - Hints on creating specification: COURSE/FM/9.md
       
   - idea:
     - 实用工具分享:  BLOG/website.md #.md文件的相对路径
