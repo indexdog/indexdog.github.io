@@ -103,7 +103,7 @@ nav:
           - Python: STUDY/language/py.md
       - 常用指令:
           - Markdown语法: STUDY/instruct/md.md
-      - Python相关:
+      - Python工具包:
           - Jupyter Notebook 快捷键: STUDY/instruct/jn.md
           - Matplotlib 用法: STUDY/py/matplotlib.md
           - Numpy & Pandas 用法: STUDY/py/numpypandas.md
