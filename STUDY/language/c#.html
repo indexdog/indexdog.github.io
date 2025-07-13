@@ -1,0 +1,3843 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="index_dog">
+      
+      
+        <link rel="canonical" href="https://indexdog.github.io/mymkdocs/STUDY/language/c%23.html">
+      
+      
+      
+      
+      <link rel="icon" href="../../favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.15">
+    
+    
+      
+        <title>c#语法 - 索引狗的博客</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+
+  
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue-grey" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#c" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../.." title="索引狗的博客" class="md-header__button md-logo" aria-label="索引狗的博客" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3 1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            索引狗的博客
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              c#语法
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="blue-grey" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="blue-grey" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="分享" aria-label="分享" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="c.html" class="md-tabs__link">
+          
+  
+  
+  学习
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../PROJECT/llm/llm.md" class="md-tabs__link">
+          
+  
+  
+  Project
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../COURSE/FM/fm.html" class="md-tabs__link">
+          
+  
+  
+  课程资料
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../blog/website.html" class="md-tabs__link">
+          
+  
+  
+  Idea
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="索引狗的博客" class="md-nav__button md-logo" aria-label="索引狗的博客" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3 1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17z"/></svg>
+
+    </a>
+    索引狗的博客
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    学习
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            学习
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_1" id="__nav_1_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    语言基础
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_1">
+            <span class="md-nav__icon md-icon"></span>
+            语言基础
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="c.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    C
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="c_sharp.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    C#
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="py.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Python
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_2" id="__nav_1_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    常用指令
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_2">
+            <span class="md-nav__icon md-icon"></span>
+            常用指令
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../instruct/md.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Markdown语法
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_3" id="__nav_1_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Python工具包
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_3">
+            <span class="md-nav__icon md-icon"></span>
+            Python工具包
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../instruct/jn.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Jupyter Notebook 快捷键
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../py/matplotlib.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Matplotlib 用法
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../py/numpypandas.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Numpy & Pandas 用法
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_4" id="__nav_1_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    算法学习
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_4">
+            <span class="md-nav__icon md-icon"></span>
+            算法学习
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../algorithm/note.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    算法基础
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../algorithm/lanqiao.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    蓝桥杯备赛
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../algorithm/stl.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    STL 总结
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../algorithm/junior.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    算法精选
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_5" id="__nav_1_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    数据结构
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_5">
+            <span class="md-nav__icon md-icon"></span>
+            数据结构
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../datastru/bj.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    数据结构基础（转载）
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_6" id="__nav_1_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    并行计算
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_6">
+            <span class="md-nav__icon md-icon"></span>
+            并行计算
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bxjs/MPI.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MPI 编程
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_7" id="__nav_1_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Docker
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_7">
+            <span class="md-nav__icon md-icon"></span>
+            Docker
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docker/docker_intro.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Docker 简介
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docker/docker_wsl.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    WSL 部署 Docker
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docker/docker_instruct.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Docker 命令
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docker/dockerfile0.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Dockerfile
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_8" id="__nav_1_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Tools in Coding
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_8">
+            <span class="md-nav__icon md-icon"></span>
+            Tools in Coding
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tools/vim.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Vim
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mkdocsq/q.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MkDocs 遇到的问题
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Project
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Project
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    桌面机器人
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            桌面机器人
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PROJECT/llm/llm.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    大模型微调
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    课程资料
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            课程资料
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    形式化方法
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            形式化方法
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../COURSE/FM/fm.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    课程介绍
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../COURSE/FM/fm1.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Introduction of Formal Methods
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../COURSE/FM/fm2.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Set Theory
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../COURSE/FM/3.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Types in Z
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../COURSE/FM/4.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Schema
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../COURSE/FM/5.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Predicates and Quantifiers in Z
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../COURSE/FM/6.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Functions in Z
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../COURSE/FM/7.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sequences in Z
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../COURSE/FM/8.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Bags in Z
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../COURSE/FM/9.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Hints on Creating Specification
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../COURSE/FM/10.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Propositional Logic
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../COURSE/FM/11.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    First-order Logic
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../COURSE/FM/12.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Modeling Concurrent Systems
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../COURSE/FM/13.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Linear-Time Properties
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../COURSE/FM/14.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Linear-Time Logic
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../COURSE/FM/15.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Model Checking
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Idea
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Idea
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    实用工具分享
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1">
+            <span class="md-nav__icon md-icon"></span>
+            实用工具分享
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/website.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    网站
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    碎碎念
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            碎碎念
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/chat.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    学习记录
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      基本语法
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="基本语法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#using" class="md-nav__link">
+    <span class="md-ellipsis">
+      using 关键字
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#class" class="md-nav__link">
+    <span class="md-ellipsis">
+      class 关键字
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      注释
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      标识符
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      C# 关键字
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#top-level-statements" class="md-nav__link">
+    <span class="md-ellipsis">
+      顶级语句（Top-Level Statements）
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      数据类型
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="数据类型">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#value-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      值类型（Value types）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reference-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      引用类型（Reference types）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pointer-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      指针类型（Pointer types）
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      类型转换
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="类型转换">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      隐式类型转换
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      显式类型转换
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      类型转换方法
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="类型转换方法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#convert" class="md-nav__link">
+    <span class="md-ellipsis">
+      使用 Convert 类
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parse" class="md-nav__link">
+    <span class="md-ellipsis">
+      使用 Parse 方法
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tryparse" class="md-nav__link">
+    <span class="md-ellipsis">
+      使用 TryParse 方法
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      常量
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="常量">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      字符常量
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cpp" class="md-nav__link">
+    <span class="md-ellipsis">
+      运算符（同cpp
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="运算符（同cpp">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      算术运算符
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      赋值运算符
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      其他运算符
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      循环
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      封装
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      方法
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="方法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      参数传递
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="参数传递">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      按输出传递参数
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nullable" class="md-nav__link">
+    <span class="md-ellipsis">
+      可空类型（Nullable）
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#array" class="md-nav__link">
+    <span class="md-ellipsis">
+      数组（Array）
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="c">c#语法<a class="headerlink" href="#c" title="Permanent link"></a></h1>
+<p>参考：<a href="https://www.runoob.com/csharp/csharp-basic-syntax.html">C# 基本语法 | 菜鸟教程</a></p>
+<p>一个 C# 程序主要包括以下部分：</p>
+<ul>
+<li>命名空间声明（Namespace declaration）</li>
+<li>一个 class</li>
+<li>Class 方法</li>
+<li>Class 属性</li>
+<li>一个 Main 方法</li>
+<li>语句（Statements）&amp; 表达式（Expressions）</li>
+<li>注释</li>
+</ul>
+<p>注意：</p>
+<ul>
+<li>
+<p>C# 文件的后缀为 <strong>.cs</strong>。</p>
+</li>
+<li>
+<p>C# 是大小写敏感的。</p>
+</li>
+<li>所有的语句和表达式必须以分号（;）结尾。</li>
+<li>程序的执行从 Main 方法开始。</li>
+<li>与 Java 不同的是，文件名可以不同于类的名称。</li>
+</ul>
+<p>以下创建一个 <strong>test.cs</strong> 文件，文件包含了可以打印出 "Hello World" 的简单代码：</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-0-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-0-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-0-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-0-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-0-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-0-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-0-10">10</a></span>
+<span class="normal"><a href="#__codelineno-0-11">11</a></span>
+<span class="normal"><a href="#__codelineno-0-12">12</a></span>
+<span class="normal"><a href="#__codelineno-0-13">13</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="k">using</span><span class="w"> </span><span class="nn">System</span><span class="p">;</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="k">namespace</span><span class="w"> </span><span class="nn">HelloWorldApplication</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="p">{</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">   </span><span class="k">class</span><span class="w"> </span><span class="nc">HelloWorld</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="w">   </span><span class="p">{</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="w">      </span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="w">      </span><span class="p">{</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="w">         </span><span class="cm">/* 我的第一个 C# 程序*/</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="w">         </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;Hello World&quot;</span><span class="p">);</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="w">         </span><span class="n">Console</span><span class="p">.</span><span class="n">ReadKey</span><span class="p">();</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="w">      </span><span class="p">}</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="w">   </span><span class="p">}</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<p>让我们看一下上面程序的各个部分：</p>
+<ul>
+<li>
+<p>程序的第一行 <strong>using System;</strong> - <strong>using</strong> 关键字用于在程序中包含 <strong>System</strong> 命名空间。 一个程序一般有多个 <strong>using</strong> 语句。</p>
+</li>
+<li>
+<p>下一行是 <strong>namespace</strong> 声明。一个 <strong>namespace</strong> 里包含了一系列的类。<em>HelloWorldApplication</em> 命名空间包含了类 <em>HelloWorld</em>。</p>
+</li>
+<li>
+<p>下一行是 <strong>class</strong> 声明。类 <em>HelloWorld</em> 包含了程序使用的数据和方法声明。类一般包含多个方法。方法定义了类的行为。在这里，<em>HelloWorld</em> 类只有一个 <strong>Main</strong> 方法。</p>
+</li>
+<li>
+<p>下一行定义了 <strong>Main</strong> 方法，是所有 C# 程序的 <strong>入口点</strong>。<strong>Main</strong> 方法说明当执行时 类将做什么动作。</p>
+</li>
+<li>
+<p>下一行 /<em>...</em>/ 将会被编译器忽略，且它会在程序中添加额外的 <strong>注释</strong>。</p>
+</li>
+<li>
+<p>Main 方法通过语句 </p>
+</li>
+</ul>
+<p><code>Console.WriteLine("Hello World");</code></p>
+<p>指定了它的行为。</p>
+<p><em>WriteLine</em> 是一个定义在 <em>System</em> 命名空间中的 <em>Console</em> 类的一个方法。该语句会在屏幕上显示消息 "Hello World"。</p>
+<ul>
+<li>最后一行 <strong>Console.ReadKey();</strong> 是针对 VS.NET 用户的。这使得程序会等待一个按键的动作，防止程序从 Visual Studio .NET 启动时屏幕会快速运行并关闭。</li>
+</ul>
+<h2 id="_1">基本语法<a class="headerlink" href="#_1" title="Permanent link"></a></h2>
+<h3 id="using"><em>using</em> 关键字<a class="headerlink" href="#using" title="Permanent link"></a></h3>
+<p>在任何 C# 程序中的第一条语句都是：（一个程序可以包含多个 using 语句。</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="k">using</span><span class="w"> </span><span class="nn">System</span><span class="p">;</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="class"><em>class</em> 关键字<a class="headerlink" href="#class" title="Permanent link"></a></h3>
+<p><strong>class</strong> 关键字用于声明一个类。</p>
+<h3 id="_2">注释<a class="headerlink" href="#_2" title="Permanent link"></a></h3>
+<p>多行注释以 <strong>/*</strong> 开始，并以字符 <em>*</em>/** 终止。</p>
+<p>单行注释是用 <strong>//</strong> 符号表示。</p>
+<h3 id="_3">标识符<a class="headerlink" href="#_3" title="Permanent link"></a></h3>
+<ul>
+<li>
+<p>标识符必须以字母、下划线或 <strong>@</strong> 开头，后面可以跟一系列的字母、数字（ 0 - 9 ）、下划线（ _ ）、@。</p>
+</li>
+<li>
+<p>标识符中的第一个字符不能是数字。</p>
+</li>
+<li>
+<p>标识符必须不包含任何嵌入的空格或符号，比如 ? - +! # % ^ &amp; * ( ) [ ] { } . ; : " ' / \。</p>
+</li>
+<li>
+<p>标识符不能是 C# 关键字。除非它们有一个 @ 前缀。 例如，@if 是有效的标识符，但 if 不是，因为 if 是关键字。</p>
+</li>
+<li>
+<p>标识符必须区分大小写。大写字母和小写字母被认为是不同的字母。</p>
+</li>
+<li>
+<p>不能与C#的类库名称相同。</p>
+</li>
+</ul>
+<h3 id="c_1">C# 关键字<a class="headerlink" href="#c_1" title="Permanent link"></a></h3>
+<p>下表列出了 C# 中的保留关键字（Reserved Keywords）和上下文关键字（Contextual Keywords）：</p>
+<table>
+<thead>
+<tr>
+<th><strong>保留关键字</strong></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>abstract</td>
+<td>as</td>
+<td>base</td>
+<td>bool</td>
+<td>break</td>
+<td>byte</td>
+<td>case</td>
+</tr>
+<tr>
+<td>catch</td>
+<td>char</td>
+<td>checked</td>
+<td>class</td>
+<td>const</td>
+<td>continue</td>
+<td>decimal</td>
+</tr>
+<tr>
+<td>default</td>
+<td>delegate</td>
+<td>do</td>
+<td>double</td>
+<td>else</td>
+<td>enum</td>
+<td>event</td>
+</tr>
+<tr>
+<td>explicit</td>
+<td>extern</td>
+<td>false</td>
+<td>finally</td>
+<td>fixed</td>
+<td>float</td>
+<td>for</td>
+</tr>
+<tr>
+<td>foreach</td>
+<td>goto</td>
+<td>if</td>
+<td>implicit</td>
+<td>in</td>
+<td>in (generic modifier)</td>
+<td>int</td>
+</tr>
+<tr>
+<td>interface</td>
+<td>internal</td>
+<td>is</td>
+<td>lock</td>
+<td>long</td>
+<td>namespace</td>
+<td>new</td>
+</tr>
+<tr>
+<td>null</td>
+<td>object</td>
+<td>operator</td>
+<td>out</td>
+<td>out (generic modifier)</td>
+<td>override</td>
+<td>params</td>
+</tr>
+<tr>
+<td>private</td>
+<td>protected</td>
+<td>public</td>
+<td>readonly</td>
+<td>ref</td>
+<td>return</td>
+<td>sbyte</td>
+</tr>
+<tr>
+<td>sealed</td>
+<td>short</td>
+<td>sizeof</td>
+<td>stackalloc</td>
+<td>static</td>
+<td>string</td>
+<td>struct</td>
+</tr>
+<tr>
+<td>switch</td>
+<td>this</td>
+<td>throw</td>
+<td>true</td>
+<td>try</td>
+<td>typeof</td>
+<td>uint</td>
+</tr>
+<tr>
+<td>ulong</td>
+<td>unchecked</td>
+<td>unsafe</td>
+<td>ushort</td>
+<td>using</td>
+<td>virtual</td>
+<td>void</td>
+</tr>
+<tr>
+<td>volatile</td>
+<td>while</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>上下文关键字</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>add</td>
+<td>alias</td>
+<td>ascending</td>
+<td>descending</td>
+<td>dynamic</td>
+<td>from</td>
+<td>get</td>
+</tr>
+<tr>
+<td>global</td>
+<td>group</td>
+<td>into</td>
+<td>join</td>
+<td>let</td>
+<td>orderby</td>
+<td>partial (type)</td>
+</tr>
+<tr>
+<td>partial (method)</td>
+<td>remove</td>
+<td>select</td>
+<td>set</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="top-level-statements">顶级语句（Top-Level Statements）<a class="headerlink" href="#top-level-statements" title="Permanent link"></a></h3>
+<p>省略无用步骤;</p>
+<p><strong>传统 C# 代码</strong> - 在使用顶级语句之前，你必须像这样编写一个 C# 程序：</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-2-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-2-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-2-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-2-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-2-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-2-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-2-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-2-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-2-10">10</a></span>
+<span class="normal"><a href="#__codelineno-2-11">11</a></span>
+<span class="normal"><a href="#__codelineno-2-12">12</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="k">using</span><span class="w"> </span><span class="nn">System</span><span class="p">;</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a>
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="k">namespace</span><span class="w"> </span><span class="nn">MyApp</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="p">{</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="w">    </span><span class="k">class</span><span class="w"> </span><span class="nc">Program</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="w">    </span><span class="p">{</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="w">        </span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="w">        </span><span class="p">{</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="w">            </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;Hello, World!&quot;</span><span class="p">);</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-2-11" name="__codelineno-2-11"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-2-12" name="__codelineno-2-12"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<p><strong>使用顶级语句的 C# 代码</strong> - 使用顶级语句，可以简化为：</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
+<span class="normal"><a href="#__codelineno-3-2">2</a></span>
+<span class="normal"><a href="#__codelineno-3-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="k">using</span><span class="w"> </span><span class="nn">System</span><span class="p">;</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a>
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;Hello, World!&quot;</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div>
+<p><strong>注意事项</strong></p>
+<ul>
+<li><strong>文件限制：</strong>顶级语句只能在一个源文件中使用。如果在一个项目中有多个使用顶级语句的文件，会导致编译错误。</li>
+<li><strong>程序入口：</strong>如果使用顶级语句，则该文件会隐式地包含 Main 方法，并且该文件将成为程序的入口点。</li>
+<li><strong>作用域限制：</strong>顶级语句中的代码共享一个全局作用域，这意味着可以在顶级语句中定义的变量和方法可以在整个文件中访问。</li>
+</ul>
+<p>顶级语句在简化代码结构、降低学习难度和加快开发速度方面具有显著优势，特别适合于编写简单程序和脚本。</p>
+<h2 id="_4">数据类型<a class="headerlink" href="#_4" title="Permanent link"></a></h2>
+<h3 id="value-types">值类型（Value types）<a class="headerlink" href="#value-types" title="Permanent link"></a></h3>
+<p>值类型变量可以直接分配给一个值。它们是从类 <strong>System.ValueType</strong> 中派生的。</p>
+<p>值类型直接包含数据。比如 <strong>int、char、float</strong>，它们分别存储数字、字符、浮点数。当您声明一个 <strong>int</strong> 类型时，系统分配内存来存储值。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">类型</th>
+<th style="text-align: left;">描述</th>
+<th style="text-align: left;">范围</th>
+<th style="text-align: left;">默认值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">bool</td>
+<td style="text-align: left;">布尔值</td>
+<td style="text-align: left;">True 或 False</td>
+<td style="text-align: left;">False</td>
+</tr>
+<tr>
+<td style="text-align: left;">byte</td>
+<td style="text-align: left;">8 位无符号整数</td>
+<td style="text-align: left;">0 到 255</td>
+<td style="text-align: left;">0</td>
+</tr>
+<tr>
+<td style="text-align: left;">char</td>
+<td style="text-align: left;">16 位 Unicode 字符</td>
+<td style="text-align: left;">U +0000 到 U +ffff</td>
+<td style="text-align: left;">'\0'</td>
+</tr>
+<tr>
+<td style="text-align: left;">decimal</td>
+<td style="text-align: left;">128 位精确的十进制值，28-29 有效位数</td>
+<td style="text-align: left;">(-7.9 x 1028 到 7.9 x 1028) / 100 到 28</td>
+<td style="text-align: left;">0.0M</td>
+</tr>
+<tr>
+<td style="text-align: left;">double</td>
+<td style="text-align: left;">64 位双精度浮点型</td>
+<td style="text-align: left;">(&plusmn;)5.0 x 10-324 到 (&plusmn;)1.7 x 10308</td>
+<td style="text-align: left;">0.0D</td>
+</tr>
+<tr>
+<td style="text-align: left;">float</td>
+<td style="text-align: left;">32 位单精度浮点型</td>
+<td style="text-align: left;">-3.4 x 1038 到 + 3.4 x 1038</td>
+<td style="text-align: left;">0.0F</td>
+</tr>
+<tr>
+<td style="text-align: left;">int</td>
+<td style="text-align: left;">32 位有符号整数类型</td>
+<td style="text-align: left;">-2,147,483,648 到 2,147,483,647</td>
+<td style="text-align: left;">0</td>
+</tr>
+<tr>
+<td style="text-align: left;">long</td>
+<td style="text-align: left;">64 位有符号整数类型</td>
+<td style="text-align: left;">-9,223,372,036,854,775,808 到 9,223,372,036,854,775,807</td>
+<td style="text-align: left;">0L</td>
+</tr>
+<tr>
+<td style="text-align: left;">sbyte</td>
+<td style="text-align: left;">8 位有符号整数类型</td>
+<td style="text-align: left;">-128 到 127</td>
+<td style="text-align: left;">0</td>
+</tr>
+<tr>
+<td style="text-align: left;">short</td>
+<td style="text-align: left;">16 位有符号整数类型</td>
+<td style="text-align: left;">-32,768 到 32,767</td>
+<td style="text-align: left;">0</td>
+</tr>
+<tr>
+<td style="text-align: left;">uint</td>
+<td style="text-align: left;">32 位无符号整数类型</td>
+<td style="text-align: left;">0 到 4,294,967,295</td>
+<td style="text-align: left;">0</td>
+</tr>
+<tr>
+<td style="text-align: left;">ulong</td>
+<td style="text-align: left;">64 位无符号整数类型</td>
+<td style="text-align: left;">0 到 18,446,744,073,709,551,615</td>
+<td style="text-align: left;">0</td>
+</tr>
+<tr>
+<td style="text-align: left;">ushort</td>
+<td style="text-align: left;">16 位无符号整数类型</td>
+<td style="text-align: left;">0 到 65,535</td>
+<td style="text-align: left;">0</td>
+</tr>
+</tbody>
+</table>
+<h3 id="reference-types">引用类型（Reference types）<a class="headerlink" href="#reference-types" title="Permanent link"></a></h3>
+<p><strong>内置的</strong> 引用类型有：<strong>object</strong>、<strong>dynamic</strong> 和 <strong>string</strong>。</p>
+<ul>
+<li>对象（Object）类型</li>
+</ul>
+<p><strong>对象（Object）类型</strong> 是 C# 通用类型系统（Common Type System - CTS）中所有数据类型的终极基类。Object 是 System.Object 类的别名。所以对象（Object）类型可以被分配任何其他类型（值类型、引用类型、预定义类型或用户自定义类型）的值。但是，在分配值之前，需要先进行类型转换。</p>
+<p>当一个值类型转换为对象类型时，则被称为 <strong>装箱</strong>；另一方面，当一个对象类型转换为值类型时，则被称为 <strong>拆箱</strong>。</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
+<span class="normal"><a href="#__codelineno-4-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="kt">object</span><span class="w"> </span><span class="n">obj</span><span class="p">;</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="n">obj</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">100</span><span class="p">;</span><span class="w"> </span><span class="c1">// 这是装箱</span>
+</code></pre></div></td></tr></table></div>
+<ul>
+<li>动态（Dynamic）类型</li>
+</ul>
+<p>您可以存储任何类型的值在动态数据类型变量中。这些变量的类型检查是在运行时发生的。</p>
+<p>声明动态类型的语法：</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="kt">dynamic</span><span class="w"> </span><span class="o">&lt;</span><span class="n">variable_name</span><span class="o">&gt;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">value</span><span class="p">;</span>
+</code></pre></div></td></tr></table></div>
+<p>例如：</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="kt">dynamic</span><span class="w"> </span><span class="n">d</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">20</span><span class="p">;</span>
+</code></pre></div></td></tr></table></div>
+<p>动态类型与对象类型相似，但是对象类型变量的类型检查是在编译时发生的，而动态类型变量的类型检查是在运行时发生的。</p>
+<ul>
+<li>字符串（String）类型</li>
+</ul>
+<p><strong>字符串（String）类型</strong> 允许您给变量分配任何字符串值。字符串（String）类型是 System.String 类的别名。它是从对象（Object）类型派生的。字符串（String）类型的值可以通过两种形式进行分配：引号和 @引号。</p>
+<p>例如：</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="n">String</span><span class="w"> </span><span class="n">str</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;runoob.com&quot;</span><span class="p">;</span>
+</code></pre></div></td></tr></table></div>
+<p>一个 @引号字符串：</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="s">@&quot;runoob.com&quot;</span><span class="p">;</span>
+</code></pre></div></td></tr></table></div>
+<p>C# string 字符串的前面可以加 @（称作"逐字字符串"）将转义字符（\）当作普通字符对待，比如：</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="kt">string</span><span class="w"> </span><span class="n">str</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">@&quot;C:\Windows&quot;</span><span class="p">;</span>
+</code></pre></div></td></tr></table></div>
+<p>等价于：</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="kt">string</span><span class="w"> </span><span class="n">str</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;C:\\Windows&quot;</span><span class="p">;</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="pointer-types">指针类型（Pointer types）<a class="headerlink" href="#pointer-types" title="Permanent link"></a></h3>
+<p>指针类型变量存储另一种类型的内存地址。C# 中的指针与 C 或 C++ 中的指针有相同的功能。</p>
+<p>声明指针类型的语法：</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="n">type</span><span class="o">*</span><span class="w"> </span><span class="n">identifier</span><span class="p">;</span>
+</code></pre></div></td></tr></table></div>
+<p>例如：</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1">1</a></span>
+<span class="normal"><a href="#__codelineno-12-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1"></a><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">cptr</span><span class="p">;</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2"></a><span class="kt">int</span><span class="o">*</span><span class="w"> </span><span class="n">iptr</span><span class="p">;</span>
+</code></pre></div></td></tr></table></div>
+<h2 id="_5">类型转换<a class="headerlink" href="#_5" title="Permanent link"></a></h2>
+<h3 id="_6"><strong>隐式类型转换</strong><a class="headerlink" href="#_6" title="Permanent link"></a></h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-1">1</a></span>
+<span class="normal"><a href="#__codelineno-13-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1"></a><span class="kt">byte</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2"></a><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w"> </span><span class="c1">// 隐式转换，不需要显式转换</span>
+</code></pre></div></td></tr></table></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-14-1">1</a></span>
+<span class="normal"><a href="#__codelineno-14-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">intValue</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">42</span><span class="p">;</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2"></a><span class="kt">long</span><span class="w"> </span><span class="n">longValue</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">intValue</span><span class="p">;</span><span class="w"> </span><span class="c1">// 隐式转换，从 int 到 long</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="_7"><strong>显式类型转换</strong><a class="headerlink" href="#_7" title="Permanent link"></a></h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-15-1">1</a></span>
+<span class="normal"><a href="#__codelineno-15-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
+<a id="__codelineno-15-2" name="__codelineno-15-2"></a><span class="kt">byte</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">byte</span><span class="p">)</span><span class="n">i</span><span class="p">;</span><span class="w"> </span><span class="c1">// 显式转换，需要使用强制类型转换符号</span>
+</code></pre></div></td></tr></table></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-16-1">1</a></span>
+<span class="normal"><a href="#__codelineno-16-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1"></a><span class="kt">double</span><span class="w"> </span><span class="n">doubleValue</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">3.14</span><span class="p">;</span>
+<a id="__codelineno-16-2" name="__codelineno-16-2"></a><span class="kt">int</span><span class="w"> </span><span class="n">intValue</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">doubleValue</span><span class="p">;</span><span class="w"> </span><span class="c1">// 强制从 double 到 int，数据可能损失小数部分</span>
+</code></pre></div></td></tr></table></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-17-1">1</a></span>
+<span class="normal"><a href="#__codelineno-17-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">intValue</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">42</span><span class="p">;</span>
+<a id="__codelineno-17-2" name="__codelineno-17-2"></a><span class="kt">float</span><span class="w"> </span><span class="n">floatValue</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">float</span><span class="p">)</span><span class="n">intValue</span><span class="p">;</span><span class="w"> </span><span class="c1">// 强制从 int 到 float，数据可能损失精度</span>
+</code></pre></div></td></tr></table></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-18-1">1</a></span>
+<span class="normal"><a href="#__codelineno-18-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">intValue</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">123</span><span class="p">;</span>
+<a id="__codelineno-18-2" name="__codelineno-18-2"></a><span class="kt">string</span><span class="w"> </span><span class="n">stringValue</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">intValue</span><span class="p">.</span><span class="n">ToString</span><span class="p">();</span><span class="w"> </span><span class="c1">// 将 int 转换为字符串</span>
+</code></pre></div></td></tr></table></div>
+<p>例：</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-19-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-19-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-19-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-19-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-19-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-19-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-19-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-19-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-19-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-19-10">10</a></span>
+<span class="normal"><a href="#__codelineno-19-11">11</a></span>
+<span class="normal"><a href="#__codelineno-19-12">12</a></span>
+<span class="normal"><a href="#__codelineno-19-13">13</a></span>
+<span class="normal"><a href="#__codelineno-19-14">14</a></span>
+<span class="normal"><a href="#__codelineno-19-15">15</a></span>
+<span class="normal"><a href="#__codelineno-19-16">16</a></span>
+<span class="normal"><a href="#__codelineno-19-17">17</a></span>
+<span class="normal"><a href="#__codelineno-19-18">18</a></span>
+<span class="normal"><a href="#__codelineno-19-19">19</a></span>
+<span class="normal"><a href="#__codelineno-19-20">20</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1"></a><span class="k">using</span><span class="w"> </span><span class="nn">System</span><span class="p">;</span>
+<a id="__codelineno-19-2" name="__codelineno-19-2"></a>
+<a id="__codelineno-19-3" name="__codelineno-19-3"></a><span class="k">namespace</span><span class="w"> </span><span class="nn">TypeConversionApplication</span>
+<a id="__codelineno-19-4" name="__codelineno-19-4"></a><span class="p">{</span>
+<a id="__codelineno-19-5" name="__codelineno-19-5"></a><span class="w">    </span><span class="k">class</span><span class="w"> </span><span class="nc">ExplicitConversion</span>
+<a id="__codelineno-19-6" name="__codelineno-19-6"></a><span class="w">    </span><span class="p">{</span>
+<a id="__codelineno-19-7" name="__codelineno-19-7"></a><span class="w">        </span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span>
+<a id="__codelineno-19-8" name="__codelineno-19-8"></a><span class="w">        </span><span class="p">{</span>
+<a id="__codelineno-19-9" name="__codelineno-19-9"></a><span class="w">            </span><span class="kt">double</span><span class="w"> </span><span class="n">d</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">5673.74</span><span class="p">;</span>
+<a id="__codelineno-19-10" name="__codelineno-19-10"></a><span class="w">            </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="p">;</span>
+<a id="__codelineno-19-11" name="__codelineno-19-11"></a>
+<a id="__codelineno-19-12" name="__codelineno-19-12"></a><span class="w">            </span><span class="c1">// 强制转换 double 为 int</span>
+<a id="__codelineno-19-13" name="__codelineno-19-13"></a><span class="w">            </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">d</span><span class="p">;</span>
+<a id="__codelineno-19-14" name="__codelineno-19-14"></a><span class="w">            </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
+<a id="__codelineno-19-15" name="__codelineno-19-15"></a><span class="w">            </span><span class="n">Console</span><span class="p">.</span><span class="n">ReadKey</span><span class="p">();</span>
+<a id="__codelineno-19-16" name="__codelineno-19-16"></a>
+<a id="__codelineno-19-17" name="__codelineno-19-17"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-19-18" name="__codelineno-19-18"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-19-19" name="__codelineno-19-19"></a><span class="p">}</span>
+<a id="__codelineno-19-20" name="__codelineno-19-20"></a><span class="c1">//输出：5673</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="_8">类型转换方法<a class="headerlink" href="#_8" title="Permanent link"></a></h3>
+<h4 id="convert">使用 Convert 类<a class="headerlink" href="#convert" title="Permanent link"></a></h4>
+<p>这些方法都定义在 System.Convert 类中，使用时需要包含 System 命名空间。它们提供了一种安全的方式来执行类型转换，因为它们可以处理 null值，并且会抛出异常，如果转换不可能进行。</p>
+<p>例如，使用 Convert.ToInt32 方法将字符串转换为整数：</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-20-1">1</a></span>
+<span class="normal"><a href="#__codelineno-20-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1"></a><span class="kt">string</span><span class="w"> </span><span class="n">str</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;123&quot;</span><span class="p">;</span>
+<a id="__codelineno-20-2" name="__codelineno-20-2"></a><span class="kt">int</span><span class="w"> </span><span class="n">number</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Convert</span><span class="p">.</span><span class="n">ToInt32</span><span class="p">(</span><span class="n">str</span><span class="p">);</span><span class="w"> </span><span class="c1">// 转换成功，number为123</span>
+</code></pre></div></td></tr></table></div>
+<h4 id="parse">使用 Parse 方法<a class="headerlink" href="#parse" title="Permanent link"></a></h4>
+<p>Parse 方法用于将字符串转换为对应的数值类型，如果转换失败会抛出异常。</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-21-1">1</a></span>
+<span class="normal"><a href="#__codelineno-21-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1"></a><span class="kt">string</span><span class="w"> </span><span class="n">str</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;123.45&quot;</span><span class="p">;</span>
+<a id="__codelineno-21-2" name="__codelineno-21-2"></a><span class="kt">double</span><span class="w"> </span><span class="n">d</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kt">double</span><span class="p">.</span><span class="n">Parse</span><span class="p">(</span><span class="n">str</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div>
+<h4 id="tryparse">使用 TryParse 方法<a class="headerlink" href="#tryparse" title="Permanent link"></a></h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-22-1">1</a></span>
+<span class="normal"><a href="#__codelineno-22-2">2</a></span>
+<span class="normal"><a href="#__codelineno-22-3">3</a></span>
+<span class="normal"><a href="#__codelineno-22-4">4</a></span>
+<span class="normal"><a href="#__codelineno-22-5">5</a></span>
+<span class="normal"><a href="#__codelineno-22-6">6</a></span>
+<span class="normal"><a href="#__codelineno-22-7">7</a></span>
+<span class="normal"><a href="#__codelineno-22-8">8</a></span>
+<span class="normal"><a href="#__codelineno-22-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1"></a><span class="kt">string</span><span class="w"> </span><span class="n">str</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;123.45&quot;</span><span class="p">;</span>
+<a id="__codelineno-22-2" name="__codelineno-22-2"></a><span class="kt">double</span><span class="w"> </span><span class="n">d</span><span class="p">;</span>
+<a id="__codelineno-22-3" name="__codelineno-22-3"></a><span class="kt">bool</span><span class="w"> </span><span class="n">success</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kt">double</span><span class="p">.</span><span class="n">TryParse</span><span class="p">(</span><span class="n">str</span><span class="p">,</span><span class="w"> </span><span class="k">out</span><span class="w"> </span><span class="n">d</span><span class="p">);</span>
+<a id="__codelineno-22-4" name="__codelineno-22-4"></a>
+<a id="__codelineno-22-5" name="__codelineno-22-5"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">success</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-22-6" name="__codelineno-22-6"></a><span class="w">    </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;转换成功: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">d</span><span class="p">);</span>
+<a id="__codelineno-22-7" name="__codelineno-22-7"></a><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-22-8" name="__codelineno-22-8"></a><span class="w">    </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;转换失败&quot;</span><span class="p">);</span>
+<a id="__codelineno-22-9" name="__codelineno-22-9"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>方法类别</strong></th>
+<th style="text-align: left;"><strong>方法</strong></th>
+<th><strong>描述</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">隐式转换</td>
+<td style="text-align: left;">自动进行的转换</td>
+<td>无需显式指定，通常用于安全的类型转换，如从较小类型到较大类型</td>
+</tr>
+<tr>
+<td style="text-align: left;">显式转换（强制转换）</td>
+<td style="text-align: left;"><code>(type)value</code></td>
+<td>需要显式指定，通常用于可能导致数据丢失或转换失败的情况</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>Convert</code> 类方法</td>
+<td style="text-align: left;"><code>Convert.ToBoolean(value)</code></td>
+<td>将指定类型转换为 <code>Boolean</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><code>Convert.ToByte(value)</code></td>
+<td>将指定类型转换为 <code>Byte</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><code>Convert.ToChar(value)</code></td>
+<td>将指定类型转换为 <code>Char</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><code>Convert.ToDateTime(value)</code></td>
+<td>将指定类型转换为 <code>DateTime</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><code>Convert.ToDecimal(value)</code></td>
+<td>将指定类型转换为 <code>Decimal</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><code>Convert.ToDouble(value)</code></td>
+<td>将指定类型转换为 <code>Double</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><code>Convert.ToInt16(value)</code></td>
+<td>将指定类型转换为 <code>Int16</code>（短整型）</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><code>Convert.ToInt32(value)</code></td>
+<td>将指定类型转换为 <code>Int32</code>（整型）</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><code>Convert.ToInt64(value)</code></td>
+<td>将指定类型转换为 <code>Int64</code>（长整型）</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><code>Convert.ToSByte(value)</code></td>
+<td>将指定类型转换为 <code>SByte</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><code>Convert.ToSingle(value)</code></td>
+<td>将指定类型转换为 <code>Single</code>（单精度浮点型）</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><code>Convert.ToString(value)</code></td>
+<td>将指定类型转换为 <code>String</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><code>Convert.ToUInt16(value)</code></td>
+<td>将指定类型转换为 <code>UInt16</code>（无符号短整型）</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><code>Convert.ToUInt32(value)</code></td>
+<td>将指定类型转换为 <code>UInt32</code>（无符号整型）</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><code>Convert.ToUInt64(value)</code></td>
+<td>将指定类型转换为 <code>UInt64</code>（无符号长整型）</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>Parse</code> 方法</td>
+<td style="text-align: left;"><code>Boolean.Parse(string)</code></td>
+<td>将字符串解析为 <code>Boolean</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><code>Byte.Parse(string)</code></td>
+<td>将字符串解析为 <code>Byte</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><code>Char.Parse(string)</code></td>
+<td>将字符串解析为 <code>Char</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><code>DateTime.Parse(string)</code></td>
+<td>将字符串解析为 <code>DateTime</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><code>Decimal.Parse(string)</code></td>
+<td>将字符串解析为 <code>Decimal</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><code>Double.Parse(string)</code></td>
+<td>将字符串解析为 <code>Double</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><code>Int16.Parse(string)</code></td>
+<td>将字符串解析为 <code>Int16</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><code>Int32.Parse(string)</code></td>
+<td>将字符串解析为 <code>Int32</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><code>Int64.Parse(string)</code></td>
+<td>将字符串解析为 <code>Int64</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><code>SByte.Parse(string)</code></td>
+<td>将字符串解析为 <code>SByte</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><code>Single.Parse(string)</code></td>
+<td>将字符串解析为 <code>Single</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><code>UInt16.Parse(string)</code></td>
+<td>将字符串解析为 <code>UInt16</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><code>UInt32.Parse(string)</code></td>
+<td>将字符串解析为 <code>UInt32</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><code>UInt64.Parse(string)</code></td>
+<td>将字符串解析为 <code>UInt64</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>TryParse</code> 方法</td>
+<td style="text-align: left;"><code>Boolean.TryParse(string, out bool)</code></td>
+<td>尝试将字符串解析为 <code>Boolean</code>，返回布尔值表示是否成功</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><code>Byte.TryParse(string, out byte)</code></td>
+<td>尝试将字符串解析为 <code>Byte</code>，返回布尔值表示是否成功</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><code>Char.TryParse(string, out char)</code></td>
+<td>尝试将字符串解析为 <code>Char</code>，返回布尔值表示是否成功</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><code>DateTime.TryParse(string, out DateTime)</code></td>
+<td>尝试将字符串解析为 <code>DateTime</code>，返回布尔值表示是否成功</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><code>Decimal.TryParse(string, out decimal)</code></td>
+<td>尝试将字符串解析为 <code>Decimal</code>，返回布尔值表示是否成功</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><code>Double.TryParse(string, out double)</code></td>
+<td>尝试将字符串解析为 <code>Double</code>，返回布尔值表示是否成功</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><code>Int16.TryParse(string, out short)</code></td>
+<td>尝试将字符串解析为 <code>Int16</code>，返回布尔值表示是否成功</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><code>Int32.TryParse(string, out int)</code></td>
+<td>尝试将字符串解析为 <code>Int32</code>，返回布尔值表示是否成功</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><code>Int64.TryParse(string, out long)</code></td>
+<td>尝试将字符串解析为 <code>Int64</code>，返回布尔值表示是否成功</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><code>SByte.TryParse(string, out sbyte)</code></td>
+<td>尝试将字符串解析为 <code>SByte</code>，返回布尔值表示是否成功</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><code>Single.TryParse(string, out float)</code></td>
+<td>尝试将字符串解析为 <code>Single</code>，返回布尔值表示是否成功</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><code>UInt16.TryParse(string, out ushort)</code></td>
+<td>尝试将字符串解析为 <code>UInt16</code>，返回布尔值表示是否成功</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><code>UInt32.TryParse(string, out uint)</code></td>
+<td>尝试将字符串解析为 <code>UInt32</code>，返回布尔值表示是否成功</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><code>UInt64.TryParse(string, out ulong)</code></td>
+<td>尝试将字符串解析为 <code>UInt64</code>，返回布尔值表示是否成功</td>
+</tr>
+</tbody>
+</table>
+<h2 id="_9">常量<a class="headerlink" href="#_9" title="Permanent link"></a></h2>
+<h3 id="_10">字符常量<a class="headerlink" href="#_10" title="Permanent link"></a></h3>
+<p>在这里，列出一些转义序列码：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">转义序列</th>
+<th style="text-align: left;">含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">\</td>
+<td style="text-align: left;"> 字符</td>
+</tr>
+<tr>
+<td style="text-align: left;">\'</td>
+<td style="text-align: left;">' 字符</td>
+</tr>
+<tr>
+<td style="text-align: left;">\"</td>
+<td style="text-align: left;">" 字符</td>
+</tr>
+<tr>
+<td style="text-align: left;">\?</td>
+<td style="text-align: left;">? 字符</td>
+</tr>
+<tr>
+<td style="text-align: left;">\a</td>
+<td style="text-align: left;">Alert 或 bell</td>
+</tr>
+<tr>
+<td style="text-align: left;">\b</td>
+<td style="text-align: left;">退格键（Backspace）</td>
+</tr>
+<tr>
+<td style="text-align: left;">\f</td>
+<td style="text-align: left;">换页符（Form feed）</td>
+</tr>
+<tr>
+<td style="text-align: left;">\n</td>
+<td style="text-align: left;">换行符（Newline）</td>
+</tr>
+<tr>
+<td style="text-align: left;">\r</td>
+<td style="text-align: left;">回车</td>
+</tr>
+<tr>
+<td style="text-align: left;">\t</td>
+<td style="text-align: left;">水平制表符 tab</td>
+</tr>
+<tr>
+<td style="text-align: left;">\v</td>
+<td style="text-align: left;">垂直制表符 tab</td>
+</tr>
+<tr>
+<td style="text-align: left;">\ooo</td>
+<td style="text-align: left;">一到三位的八进制数</td>
+</tr>
+<tr>
+<td style="text-align: left;">\xhh . . .</td>
+<td style="text-align: left;">一个或多个数字的十六进制数</td>
+</tr>
+</tbody>
+</table>
+<h2 id="cpp">运算符（同cpp<a class="headerlink" href="#cpp" title="Permanent link"></a></h2>
+<h3 id="_11">算术运算符<a class="headerlink" href="#_11" title="Permanent link"></a></h3>
+<p>下表显示了 C# 支持的所有算术运算符。假设变量 <strong>A</strong> 的值为 10，变量 <strong>B</strong> 的值为 20，则：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">运算符</th>
+<th style="text-align: left;">描述</th>
+<th style="text-align: left;">实例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">+</td>
+<td style="text-align: left;">把两个操作数相加</td>
+<td style="text-align: left;">A + B 将得到 30</td>
+</tr>
+<tr>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">从第一个操作数中减去第二个操作数</td>
+<td style="text-align: left;">A - B 将得到 -10</td>
+</tr>
+<tr>
+<td style="text-align: left;">*</td>
+<td style="text-align: left;">把两个操作数相乘</td>
+<td style="text-align: left;">A * B 将得到 200</td>
+</tr>
+<tr>
+<td style="text-align: left;">/</td>
+<td style="text-align: left;">分子除以分母</td>
+<td style="text-align: left;">B / A 将得到 2</td>
+</tr>
+<tr>
+<td style="text-align: left;">%</td>
+<td style="text-align: left;">取模运算符，整除后的余数</td>
+<td style="text-align: left;">B % A 将得到 0</td>
+</tr>
+<tr>
+<td style="text-align: left;">++</td>
+<td style="text-align: left;">自增运算符，整数值增加 1</td>
+<td style="text-align: left;">A++ 将得到 11</td>
+</tr>
+<tr>
+<td style="text-align: left;">--</td>
+<td style="text-align: left;">自减运算符，整数值减少 1</td>
+<td style="text-align: left;">A-- 将得到 9</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>c = a++</strong>: 先将 a 赋值给 c，再对 a 进行自增运算。</li>
+<li><strong>c = ++a</strong>: 先将 a 进行自增运算，再将 a 赋值给 c 。</li>
+<li><strong>c = a--</strong>: 先将 a 赋值给 c，再对 a 进行自减运算。</li>
+<li><strong>c = --a</strong>: 先将 a 进行自减运算，再将 a 赋值给 c 。</li>
+</ul>
+<h3 id="_12">赋值运算符<a class="headerlink" href="#_12" title="Permanent link"></a></h3>
+<p>下表列出了 C# 支持的赋值运算符：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">运算符</th>
+<th style="text-align: left;">描述</th>
+<th style="text-align: left;">实例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">=</td>
+<td style="text-align: left;">简单的赋值运算符，把右边操作数的值赋给左边操作数</td>
+<td style="text-align: left;">C = A + B 将把 A + B 的值赋给 C</td>
+</tr>
+<tr>
+<td style="text-align: left;">+=</td>
+<td style="text-align: left;">加且赋值运算符，把右边操作数加上左边操作数的结果赋值给左边操作数</td>
+<td style="text-align: left;">C += A 相当于 C = C + A</td>
+</tr>
+<tr>
+<td style="text-align: left;">-=</td>
+<td style="text-align: left;">减且赋值运算符，把左边操作数减去右边操作数的结果赋值给左边操作数</td>
+<td style="text-align: left;">C -= A 相当于 C = C - A</td>
+</tr>
+<tr>
+<td style="text-align: left;">*=</td>
+<td style="text-align: left;">乘且赋值运算符，把右边操作数乘以左边操作数的结果赋值给左边操作数</td>
+<td style="text-align: left;">C *= A 相当于 C = C * A</td>
+</tr>
+<tr>
+<td style="text-align: left;">/=</td>
+<td style="text-align: left;">除且赋值运算符，把左边操作数除以右边操作数的结果赋值给左边操作数</td>
+<td style="text-align: left;">C /= A 相当于 C = C / A</td>
+</tr>
+<tr>
+<td style="text-align: left;">%=</td>
+<td style="text-align: left;">求模且赋值运算符，求两个操作数的模赋值给左边操作数</td>
+<td style="text-align: left;">C %= A 相当于 C = C % A</td>
+</tr>
+<tr>
+<td style="text-align: left;">&lt;&lt;=</td>
+<td style="text-align: left;">左移且赋值运算符</td>
+<td style="text-align: left;">C &lt;&lt;= 2 等同于 C = C &lt;&lt; 2</td>
+</tr>
+<tr>
+<td style="text-align: left;">&gt;&gt;=</td>
+<td style="text-align: left;">右移且赋值运算符</td>
+<td style="text-align: left;">C &gt;&gt;= 2 等同于 C = C &gt;&gt; 2</td>
+</tr>
+<tr>
+<td style="text-align: left;">&amp;=</td>
+<td style="text-align: left;">按位与且赋值运算符</td>
+<td style="text-align: left;">C &amp;= 2 等同于 C = C &amp; 2</td>
+</tr>
+<tr>
+<td style="text-align: left;">^=</td>
+<td style="text-align: left;">按位异或且赋值运算符</td>
+<td style="text-align: left;">C ^= 2 等同于 C = C ^ 2</td>
+</tr>
+<tr>
+<td style="text-align: left;">|=</td>
+<td style="text-align: left;">按位或且赋值运算符</td>
+<td style="text-align: left;">C |= 2 等同于 C = C | 2</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_13">其他运算符<a class="headerlink" href="#_13" title="Permanent link"></a></h3>
+<p>下表列出了 C# 支持的其他一些重要的运算符，包括 <strong>sizeof</strong>、<strong>typeof</strong> 和 <strong>? :</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">运算符</th>
+<th style="text-align: left;">描述</th>
+<th style="text-align: left;">实例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">sizeof()</td>
+<td style="text-align: left;">返回数据类型的大小。</td>
+<td style="text-align: left;">sizeof(int)，将返回 4.</td>
+</tr>
+<tr>
+<td style="text-align: left;">typeof()</td>
+<td style="text-align: left;">返回 class 的类型。</td>
+<td style="text-align: left;">typeof(StreamReader);</td>
+</tr>
+<tr>
+<td style="text-align: left;">&amp;</td>
+<td style="text-align: left;">返回变量的地址。</td>
+<td style="text-align: left;">&a; 将得到变量的实际地址。</td>
+</tr>
+<tr>
+<td style="text-align: left;">*</td>
+<td style="text-align: left;">变量的指针。</td>
+<td style="text-align: left;">*a; 将指向一个变量。</td>
+</tr>
+<tr>
+<td style="text-align: left;">? :</td>
+<td style="text-align: left;">条件表达式</td>
+<td style="text-align: left;">如果条件为真 ? 则为 X : 否则为 Y</td>
+</tr>
+<tr>
+<td style="text-align: left;">is</td>
+<td style="text-align: left;">判断对象是否为某一类型。</td>
+<td style="text-align: left;">If( Ford is Car) // 检查 Ford 是否是 Car 类的一个对象。</td>
+</tr>
+<tr>
+<td style="text-align: left;">as</td>
+<td style="text-align: left;">强制转换，即使转换失败也不会抛出异常。</td>
+<td style="text-align: left;">Object obj = new StringReader("Hello"); StringReader r = obj as StringReader;</td>
+</tr>
+</tbody>
+</table>
+<h2 id="_14">循环<a class="headerlink" href="#_14" title="Permanent link"></a></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">循环类型</th>
+<th style="text-align: left;">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><a href="https://www.runoob.com/csharp/csharp-while-loop.html">while 循环</a></td>
+<td style="text-align: left;">当给定条件为真时，重复语句或语句组。它会在执行循环主体之前测试条件。</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="https://www.runoob.com/csharp/csharp-for-loop.html">for/foreach 循环</a></td>
+<td style="text-align: left;">多次执行一个语句序列，简化管理循环变量的代码。</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="https://www.runoob.com/csharp/csharp-do-while-loop.html">do...while 循环</a></td>
+<td style="text-align: left;">除了它是在循环主体结尾测试条件外，其他与 while 语句类似。</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="https://www.runoob.com/csharp/csharp-nested-loops.html">嵌套循环</a></td>
+<td style="text-align: left;">您可以在 while、for 或 do..while 循环内使用一个或多个循环。</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">控制语句</th>
+<th style="text-align: left;">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><a href="https://www.runoob.com/csharp/csharp-break-statement.html">break 语句</a></td>
+<td style="text-align: left;">终止 <strong>loop</strong> 或 <strong>switch</strong> 语句，程序流将继续执行紧接着 loop 或 switch 的下一条语句。</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="https://www.runoob.com/csharp/csharp-continue-statement.html">continue 语句</a></td>
+<td style="text-align: left;">跳过本轮循环，开始下一轮循环。</td>
+</tr>
+</tbody>
+</table>
+<p>当条件表达式不存在时，它被假设为真。您也可以设置一个初始值和增量表达式，但是一般情况下，程序员偏向于使用 for(;;) 结构来表示一个无限循环。</p>
+<h2 id="_15">封装<a class="headerlink" href="#_15" title="Permanent link"></a></h2>
+<p><strong>封装</strong> 被定义为"把一个或多个项目封闭在一个物理的或者逻辑的包中"。在面向对象程序设计方法论中，封装是为了防止对实现细节的访问。</p>
+<p>抽象和封装是面向对象程序设计的相关特性。抽象允许相关信息可视化，封装则使开发者<em>实现所需级别的抽象</em>。</p>
+<p>C# 封装根据具体的需要，设置使用者的访问权限，并通过 <strong>访问修饰符</strong> 来实现。</p>
+<p>一个 <strong>访问修饰符</strong> 定义了一个类成员的范围和可见性。C# 支持的访问修饰符如下所示：</p>
+<ul>
+<li>public：所有对象都可以访问；</li>
+<li>private：对象本身在对象内部可以访问；</li>
+<li>protected：只有该类对象及其子类对象可以访问</li>
+<li>internal：同一个程序集的对象可以访问；</li>
+<li>protected internal：访问限于当前程序集或派生自包含类的类型。</li>
+</ul>
+<p><img alt="img" src="https://www.runoob.com/wp-content/uploads/2014/04/csharp-public.png" /></p>
+<h2 id="_16">方法<a class="headerlink" href="#_16" title="Permanent link"></a></h2>
+<h3 id="_17">参数传递<a class="headerlink" href="#_17" title="Permanent link"></a></h3>
+<p>在 C# 中，有三种向方法传递参数的方式：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">方式</th>
+<th style="text-align: left;">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">值参数</td>
+<td style="text-align: left;">这种方式复制参数的实际值给函数的形式参数，实参和形参使用的是两个不同内存中的值。在这种情况下，当形参的值发生改变时，不会影响实参的值，从而保证了实参数据的安全。</td>
+</tr>
+<tr>
+<td style="text-align: left;">引用参数</td>
+<td style="text-align: left;">这种方式复制参数的内存位置的引用给形式参数。这意味着，当形参的值发生改变时，同时也改变实参的值。</td>
+</tr>
+<tr>
+<td style="text-align: left;">输出参数</td>
+<td style="text-align: left;">这种方式可以返回多个值。</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_18">按输出传递参数<a class="headerlink" href="#_18" title="Permanent link"></a></h4>
+<p>return 语句可用于只从函数中返回一个值。但是，可以使用 <strong>输出参数</strong> 来从函数中返回两个值。输出参数会把方法输出的数据赋给自己，其他方面与引用参数相似。</p>
+<p>下面的实例演示了这点：</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-23-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-23-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-23-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-23-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-23-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-23-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-23-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-23-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-23-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-23-10">10</a></span>
+<span class="normal"><a href="#__codelineno-23-11">11</a></span>
+<span class="normal"><a href="#__codelineno-23-12">12</a></span>
+<span class="normal"><a href="#__codelineno-23-13">13</a></span>
+<span class="normal"><a href="#__codelineno-23-14">14</a></span>
+<span class="normal"><a href="#__codelineno-23-15">15</a></span>
+<span class="normal"><a href="#__codelineno-23-16">16</a></span>
+<span class="normal"><a href="#__codelineno-23-17">17</a></span>
+<span class="normal"><a href="#__codelineno-23-18">18</a></span>
+<span class="normal"><a href="#__codelineno-23-19">19</a></span>
+<span class="normal"><a href="#__codelineno-23-20">20</a></span>
+<span class="normal"><a href="#__codelineno-23-21">21</a></span>
+<span class="normal"><a href="#__codelineno-23-22">22</a></span>
+<span class="normal"><a href="#__codelineno-23-23">23</a></span>
+<span class="normal"><a href="#__codelineno-23-24">24</a></span>
+<span class="normal"><a href="#__codelineno-23-25">25</a></span>
+<span class="normal"><a href="#__codelineno-23-26">26</a></span>
+<span class="normal"><a href="#__codelineno-23-27">27</a></span>
+<span class="normal"><a href="#__codelineno-23-28">28</a></span>
+<span class="normal"><a href="#__codelineno-23-29">29</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1"></a><span class="k">using</span><span class="w"> </span><span class="nn">System</span><span class="p">;</span>
+<a id="__codelineno-23-2" name="__codelineno-23-2"></a>
+<a id="__codelineno-23-3" name="__codelineno-23-3"></a><span class="k">namespace</span><span class="w"> </span><span class="nn">CalculatorApplication</span>
+<a id="__codelineno-23-4" name="__codelineno-23-4"></a><span class="p">{</span>
+<a id="__codelineno-23-5" name="__codelineno-23-5"></a><span class="w">   </span><span class="k">class</span><span class="w"> </span><span class="nc">NumberManipulator</span>
+<a id="__codelineno-23-6" name="__codelineno-23-6"></a><span class="w">   </span><span class="p">{</span>
+<a id="__codelineno-23-7" name="__codelineno-23-7"></a><span class="w">      </span><span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">getValue</span><span class="p">(</span><span class="k">out</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="p">)</span>
+<a id="__codelineno-23-8" name="__codelineno-23-8"></a><span class="w">      </span><span class="p">{</span>
+<a id="__codelineno-23-9" name="__codelineno-23-9"></a><span class="w">         </span><span class="kt">int</span><span class="w"> </span><span class="n">temp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
+<a id="__codelineno-23-10" name="__codelineno-23-10"></a><span class="w">         </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">temp</span><span class="p">;</span>
+<a id="__codelineno-23-11" name="__codelineno-23-11"></a><span class="w">      </span><span class="p">}</span>
+<a id="__codelineno-23-12" name="__codelineno-23-12"></a>
+<a id="__codelineno-23-13" name="__codelineno-23-13"></a><span class="w">      </span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span>
+<a id="__codelineno-23-14" name="__codelineno-23-14"></a><span class="w">      </span><span class="p">{</span>
+<a id="__codelineno-23-15" name="__codelineno-23-15"></a><span class="w">         </span><span class="n">NumberManipulator</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">NumberManipulator</span><span class="p">();</span>
+<a id="__codelineno-23-16" name="__codelineno-23-16"></a><span class="w">         </span><span class="cm">/* 局部变量定义 */</span>
+<a id="__codelineno-23-17" name="__codelineno-23-17"></a><span class="w">         </span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">100</span><span class="p">;</span>
+<a id="__codelineno-23-18" name="__codelineno-23-18"></a>
+<a id="__codelineno-23-19" name="__codelineno-23-19"></a><span class="w">         </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;在方法调用之前，a 的值： {0}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">a</span><span class="p">);</span>
+<a id="__codelineno-23-20" name="__codelineno-23-20"></a>
+<a id="__codelineno-23-21" name="__codelineno-23-21"></a><span class="w">         </span><span class="cm">/* 调用函数来获取值 */</span>
+<a id="__codelineno-23-22" name="__codelineno-23-22"></a><span class="w">         </span><span class="n">n</span><span class="p">.</span><span class="n">getValue</span><span class="p">(</span><span class="k">out</span><span class="w"> </span><span class="n">a</span><span class="p">);</span>
+<a id="__codelineno-23-23" name="__codelineno-23-23"></a>
+<a id="__codelineno-23-24" name="__codelineno-23-24"></a><span class="w">         </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;在方法调用之后，a 的值： {0}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">a</span><span class="p">);</span>
+<a id="__codelineno-23-25" name="__codelineno-23-25"></a><span class="w">         </span><span class="n">Console</span><span class="p">.</span><span class="n">ReadLine</span><span class="p">();</span>
+<a id="__codelineno-23-26" name="__codelineno-23-26"></a>
+<a id="__codelineno-23-27" name="__codelineno-23-27"></a><span class="w">      </span><span class="p">}</span>
+<a id="__codelineno-23-28" name="__codelineno-23-28"></a><span class="w">   </span><span class="p">}</span>
+<a id="__codelineno-23-29" name="__codelineno-23-29"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<p>当上面的代码被编译和执行时，它会产生下列结果：</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-24-1">1</a></span>
+<span class="normal"><a href="#__codelineno-24-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1"></a><span class="err">在方法调用之前，</span><span class="n">a</span><span class="w"> </span><span class="err">的值：</span><span class="w"> </span><span class="mi">100</span>
+<a id="__codelineno-24-2" name="__codelineno-24-2"></a><span class="err">在方法调用之后，</span><span class="n">a</span><span class="w"> </span><span class="err">的值：</span><span class="w"> </span><span class="mi">5</span>
+</code></pre></div></td></tr></table></div>
+<p>提供给输出参数的变量不需要赋值。当需要从一个参数没有指定初始值的方法中返回值时，输出参数特别有用。请看下面的实例，来理解这一点：</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-25-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-25-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-25-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-25-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-25-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-25-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-25-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-25-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-25-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-25-10">10</a></span>
+<span class="normal"><a href="#__codelineno-25-11">11</a></span>
+<span class="normal"><a href="#__codelineno-25-12">12</a></span>
+<span class="normal"><a href="#__codelineno-25-13">13</a></span>
+<span class="normal"><a href="#__codelineno-25-14">14</a></span>
+<span class="normal"><a href="#__codelineno-25-15">15</a></span>
+<span class="normal"><a href="#__codelineno-25-16">16</a></span>
+<span class="normal"><a href="#__codelineno-25-17">17</a></span>
+<span class="normal"><a href="#__codelineno-25-18">18</a></span>
+<span class="normal"><a href="#__codelineno-25-19">19</a></span>
+<span class="normal"><a href="#__codelineno-25-20">20</a></span>
+<span class="normal"><a href="#__codelineno-25-21">21</a></span>
+<span class="normal"><a href="#__codelineno-25-22">22</a></span>
+<span class="normal"><a href="#__codelineno-25-23">23</a></span>
+<span class="normal"><a href="#__codelineno-25-24">24</a></span>
+<span class="normal"><a href="#__codelineno-25-25">25</a></span>
+<span class="normal"><a href="#__codelineno-25-26">26</a></span>
+<span class="normal"><a href="#__codelineno-25-27">27</a></span>
+<span class="normal"><a href="#__codelineno-25-28">28</a></span>
+<span class="normal"><a href="#__codelineno-25-29">29</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1"></a><span class="k">using</span><span class="w"> </span><span class="nn">System</span><span class="p">;</span>
+<a id="__codelineno-25-2" name="__codelineno-25-2"></a>
+<a id="__codelineno-25-3" name="__codelineno-25-3"></a><span class="k">namespace</span><span class="w"> </span><span class="nn">CalculatorApplication</span>
+<a id="__codelineno-25-4" name="__codelineno-25-4"></a><span class="p">{</span>
+<a id="__codelineno-25-5" name="__codelineno-25-5"></a><span class="w">   </span><span class="k">class</span><span class="w"> </span><span class="nc">NumberManipulator</span>
+<a id="__codelineno-25-6" name="__codelineno-25-6"></a><span class="w">   </span><span class="p">{</span>
+<a id="__codelineno-25-7" name="__codelineno-25-7"></a><span class="w">      </span><span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">getValues</span><span class="p">(</span><span class="k">out</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="k">out</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="p">)</span>
+<a id="__codelineno-25-8" name="__codelineno-25-8"></a><span class="w">      </span><span class="p">{</span>
+<a id="__codelineno-25-9" name="__codelineno-25-9"></a><span class="w">          </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;请输入第一个值： &quot;</span><span class="p">);</span>
+<a id="__codelineno-25-10" name="__codelineno-25-10"></a><span class="w">          </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Convert</span><span class="p">.</span><span class="n">ToInt32</span><span class="p">(</span><span class="n">Console</span><span class="p">.</span><span class="n">ReadLine</span><span class="p">());</span>
+<a id="__codelineno-25-11" name="__codelineno-25-11"></a><span class="w">          </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;请输入第二个值： &quot;</span><span class="p">);</span>
+<a id="__codelineno-25-12" name="__codelineno-25-12"></a><span class="w">          </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Convert</span><span class="p">.</span><span class="n">ToInt32</span><span class="p">(</span><span class="n">Console</span><span class="p">.</span><span class="n">ReadLine</span><span class="p">());</span>
+<a id="__codelineno-25-13" name="__codelineno-25-13"></a><span class="w">      </span><span class="p">}</span>
+<a id="__codelineno-25-14" name="__codelineno-25-14"></a>
+<a id="__codelineno-25-15" name="__codelineno-25-15"></a><span class="w">      </span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span>
+<a id="__codelineno-25-16" name="__codelineno-25-16"></a><span class="w">      </span><span class="p">{</span>
+<a id="__codelineno-25-17" name="__codelineno-25-17"></a><span class="w">         </span><span class="n">NumberManipulator</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">NumberManipulator</span><span class="p">();</span>
+<a id="__codelineno-25-18" name="__codelineno-25-18"></a><span class="w">         </span><span class="cm">/* 局部变量定义 */</span>
+<a id="__codelineno-25-19" name="__codelineno-25-19"></a><span class="w">         </span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">;</span>
+<a id="__codelineno-25-20" name="__codelineno-25-20"></a>
+<a id="__codelineno-25-21" name="__codelineno-25-21"></a><span class="w">         </span><span class="cm">/* 调用函数来获取值 */</span>
+<a id="__codelineno-25-22" name="__codelineno-25-22"></a><span class="w">         </span><span class="n">n</span><span class="p">.</span><span class="n">getValues</span><span class="p">(</span><span class="k">out</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="k">out</span><span class="w"> </span><span class="n">b</span><span class="p">);</span>
+<a id="__codelineno-25-23" name="__codelineno-25-23"></a>
+<a id="__codelineno-25-24" name="__codelineno-25-24"></a><span class="w">         </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;在方法调用之后，a 的值： {0}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">a</span><span class="p">);</span>
+<a id="__codelineno-25-25" name="__codelineno-25-25"></a><span class="w">         </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;在方法调用之后，b 的值： {0}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">);</span>
+<a id="__codelineno-25-26" name="__codelineno-25-26"></a><span class="w">         </span><span class="n">Console</span><span class="p">.</span><span class="n">ReadLine</span><span class="p">();</span>
+<a id="__codelineno-25-27" name="__codelineno-25-27"></a><span class="w">      </span><span class="p">}</span>
+<a id="__codelineno-25-28" name="__codelineno-25-28"></a><span class="w">   </span><span class="p">}</span>
+<a id="__codelineno-25-29" name="__codelineno-25-29"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<p>当上面的代码被编译和执行时，它会产生下列结果（取决于用户输入）：</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-26-1">1</a></span>
+<span class="normal"><a href="#__codelineno-26-2">2</a></span>
+<span class="normal"><a href="#__codelineno-26-3">3</a></span>
+<span class="normal"><a href="#__codelineno-26-4">4</a></span>
+<span class="normal"><a href="#__codelineno-26-5">5</a></span>
+<span class="normal"><a href="#__codelineno-26-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1"></a><span class="err">请输入第一个值：</span>
+<a id="__codelineno-26-2" name="__codelineno-26-2"></a><span class="mi">7</span>
+<a id="__codelineno-26-3" name="__codelineno-26-3"></a><span class="err">请输入第二个值：</span>
+<a id="__codelineno-26-4" name="__codelineno-26-4"></a><span class="mi">8</span>
+<a id="__codelineno-26-5" name="__codelineno-26-5"></a><span class="err">在方法调用之后，</span><span class="n">a</span><span class="w"> </span><span class="err">的值：</span><span class="w"> </span><span class="mi">7</span>
+<a id="__codelineno-26-6" name="__codelineno-26-6"></a><span class="err">在方法调用之后，</span><span class="n">b</span><span class="w"> </span><span class="err">的值：</span><span class="w"> </span><span class="mi">8</span>
+</code></pre></div></td></tr></table></div>
+<h2 id="nullable">可空类型（Nullable）<a class="headerlink" href="#nullable" title="Permanent link"></a></h2>
+<p><strong>?</strong> 单问号用于对 <strong>int、double、bool</strong> 等无法直接赋值为 null 的数据类型进行 null 的赋值，意思是这个数据类型是 Nullable 类型的。</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-27-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1"></a><span class="kt">int?</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span>
+</code></pre></div></td></tr></table></div>
+<p>等同于：</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-28-1">1</a></span>
+<span class="normal"><a href="#__codelineno-28-2">2</a></span>
+<span class="normal"><a href="#__codelineno-28-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1"></a><span class="n">Nullable</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Nullable</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span>
+<a id="__codelineno-28-2" name="__codelineno-28-2"></a><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="p">;</span><span class="w"> </span><span class="c1">//默认值0</span>
+<a id="__codelineno-28-3" name="__codelineno-28-3"></a><span class="kt">int?</span><span class="w"> </span><span class="n">ii</span><span class="p">;</span><span class="w"> </span><span class="c1">//默认值null</span>
+</code></pre></div></td></tr></table></div>
+<p><strong>??</strong> 双问号用于判断一个变量在为 null 的时候返回一个指定的值。</p>
+<p>接下来我们详细说明。</p>
+<p><img alt="alt text" src="image-18.png" /></p>
+<h2 id="array">数组（Array）<a class="headerlink" href="#array" title="Permanent link"></a></h2>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+  <h2 id="__comments">评论</h2>
+  <!-- Insert generated snippet here -->
+  <script src="https://giscus.app/client.js"
+  data-repo="indexdog/indexdog.github.io"
+  data-repo-id="R_kgDONQjD8A"
+  data-category="Announcements"
+  data-category-id="DIC_kwDONQjD8M4CkV42"
+  data-mapping="pathname"
+  data-strict="0"
+  data-reactions-enabled="1"
+  data-emit-metadata="0"
+  data-input-position="top"
+  data-theme="dark"
+  data-lang="zh-CN"
+  crossorigin="anonymous"
+  async>
+</script>
+  <!-- Synchronize Giscus theme with palette -->
+  <script>
+    var giscus = document.querySelector("script[src*=giscus]")
+
+    // Set palette on initial load
+    var palette = __md_get("__palette")
+    if (palette && typeof palette.color === "object") {
+      var theme = palette.color.scheme === "slate"
+        ? "transparent_dark"
+        : "light"
+
+      // Instruct Giscus to set theme
+      giscus.setAttribute("data-theme", theme) 
+    }
+
+    // Register event handlers after documented loaded
+    document.addEventListener("DOMContentLoaded", function() {
+      var ref = document.querySelector("[data-md-component=palette]")
+      ref.addEventListener("change", function() {
+        var palette = __md_get("__palette")
+        if (palette && typeof palette.color === "object") {
+          var theme = palette.color.scheme === "slate"
+            ? "transparent_dark"
+            : "light"
+
+          // Instruct Giscus to change theme
+          var frame = document.querySelector(".giscus-frame")
+          frame.contentWindow.postMessage(
+            { giscus: { setConfig: { theme } } },
+            "https://giscus.app"
+          )
+        }
+      })
+    })
+  </script>
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2024-2024 indexdog
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["announce.dismiss", "navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.sections", "navigation.top", "navigation.footer", "navigation.expand", "search.suggest", "search.highlight", "search.share", "content.tabs.link", "content.tooltips", "content.code.copy", "content.action.edit", "content.action.view", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.56ea9cef.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,18 @@
+/* 自定义深蓝色和亮蓝色 */
+.md-main, .md-nav {
+    background-color: #1E3A8A !important; /* 深蓝色背景 */
+}
+
+.md-button.md-raised.md-primary {
+    background-color: #3B82F6 !important; /* 亮蓝色按钮 */
+}
+
+.md-header {
+    background-color: #1E3A8A !important; /* 深蓝色头部 */
+}
+
+.md-footer {
+    background-color: #1E3A8A !important; /* 深蓝色页脚 */
+}
+
+/* 如果需要修改其他元素颜色，可以继续添加规则 */
